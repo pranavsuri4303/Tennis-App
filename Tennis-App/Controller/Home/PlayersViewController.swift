@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  PlayersViewController.swift
 //  Tennis-App
 //
 //  Created by Pranav  Suri on 5/5/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class PlayersViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -17,4 +17,3 @@ class SecondViewController: UIViewController {
 
 
 }
-
