@@ -12,6 +12,15 @@ class ProfileViewController: UIViewController, UTRManagerDelegate {
 
 	var utrManager = UTRManager()
 
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		// Do any additional setup after loading the view.
+		utrManager.delegate = self
+		utrManager.fetchProfile(withID: "1631587")
+
+
+	}
+
 	func didUpdateUtrProfile(profile: Profile) {
 		DispatchQueue.main.async {
 			print(profile.name)
@@ -22,17 +31,7 @@ class ProfileViewController: UIViewController, UTRManagerDelegate {
 	}
 
 	func didFailWithError(error: Error!) {
-		print(error)
-	}
-
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		// Do any additional setup after loading the view.
-		utrManager.delegate = self
-		utrManager.fetchProfile(withID: "1631587")
-
-
+		print(error!)
 	}
 
 
