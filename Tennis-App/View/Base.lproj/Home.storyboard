@@ -17,11 +17,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="Jfw-Pt-w0x"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="QWJ-7d-JwB"/>
                         <segue destination="IzS-Ms-Nat" kind="relationship" relationship="viewControllers" id="mde-TM-mgp"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="Jfw-Pt-w0x"/>
                         <segue destination="sDe-SS-W9l" kind="relationship" relationship="viewControllers" id="9RQ-RD-zeo"/>
                         <segue destination="a2d-EX-Ttc" kind="relationship" relationship="viewControllers" id="Fwb-cJ-KsY"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="QWJ-7d-JwB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNz-Qu-icH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -73,7 +73,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="2ID-Jf-GRq"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Play" image="bolt.circle" catalog="system" id="F3a-uA-AxI"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="bolt.circle.fill" catalog="system" id="F3a-uA-AxI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jW4-td-Bn7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,7 +108,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle.fill" catalog="system" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,7 +124,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ef9-2v-zpR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chat" image="message.fill" catalog="system" id="ffa-er-xiB"/>
+                    <tabBarItem key="tabBarItem" title="Chat" image="message.circle.fill" catalog="system" id="ffa-er-xiB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FEC-SC-g8O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,7 +140,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="vQA-Hi-8Me"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="68T-yg-V2p"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass.circle.fill" catalog="system" id="68T-yg-V2p"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5E6-zJ-oZ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,9 +148,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bolt.circle" catalog="system" width="128" height="121"/>
+        <image name="bolt.circle.fill" catalog="system" width="128" height="121"/>
         <image name="eyeglasses" catalog="system" width="128" height="54"/>
-        <image name="message.fill" catalog="system" width="128" height="113"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="message.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
