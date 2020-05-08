@@ -1,5 +1,5 @@
 //
-//  UTRModel.swift
+//  UTRProfile.swift
 //  Tennis-App
 //
 //  Created by Pranav  Suri on 6/5/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Profile {
+struct UTRProfile {
 
 	let name: String
 

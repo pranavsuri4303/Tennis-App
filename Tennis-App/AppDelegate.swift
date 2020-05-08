@@ -19,7 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Override point for customization after application launch.
 		// Use Firebase library to configure APIs
 		FirebaseApp.configure()
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
 		return true
+	}
+	
+	@available(iOS 9.0, *)
+	func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+	  -> Bool {
+	  return GIDSignIn.sharedInstance().handle(url)
 	}
 
 	// MARK: UISceneSession Lifecycle
@@ -30,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
 	}
 
+	@available(iOS 13.0, *)
 	func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
 		// Called when the user discards a scene session.
 		// If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.

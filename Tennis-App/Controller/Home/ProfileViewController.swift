@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController, UTRManagerDelegate {
 
 	}
 
-	func didUpdateUtrProfile(profile: Profile) {
+	func didUpdateUtrProfile(profile: UTRProfile) {
 		DispatchQueue.main.async {
 			print(profile.name)
 			print(profile.singles)

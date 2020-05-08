@@ -1,5 +1,5 @@
 //
-//  UTRResponse.swift
+//  UTRProfileResponse.swift
 //  Tennis-App
 //
 //  Created by Pranav  Suri on 6/5/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ProfileResponse: Decodable {
+struct UTRProfileResponse: Decodable {
 	let firstName: String
 	let lastName: String
 

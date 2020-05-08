@@ -23,18 +23,22 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sS-lf-RbS" userLabel="Login">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
-                                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.078431372549019607" green="0.15686274509803921" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="Sign in"/>
+                                                <state key="normal" title="Sign in">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <segue destination="FpY-dI-ddS" kind="presentation" id="PBK-Es-mJM"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSg-pO-Eei" userLabel="Register">
                                                 <rect key="frame" x="0.0" y="46" width="374" height="36"/>
-                                                <color key="backgroundColor" red="0.84313725490000002" green="0.21960784310000001" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.078431372549019607" green="0.15686274509803921" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="Register"/>
+                                                <state key="normal" title="Register">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <segue destination="cN4-I8-Olj" kind="presentation" id="Xk6-5S-yfa"/>
                                                 </connections>
@@ -51,7 +55,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.85490196078431369" green="0.88235294117647056" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vJC-bn-vel" firstAttribute="leading" secondItem="Uku-2B-BIl" secondAttribute="leading" constant="20" id="2zQ-DU-g5l"/>
                             <constraint firstItem="Uku-2B-BIl" firstAttribute="trailing" secondItem="vJC-bn-vel" secondAttribute="trailing" constant="20" id="4p9-Rp-hBT"/>
@@ -83,17 +87,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign in"/>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OMr-SJ-0Yg" customClass="GIDSignInButton">
+                                <rect key="frame" x="87" y="454" width="240" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="yaL-n5-jzY"/>
                     </view>
                     <connections>
+                        <outlet property="googlButton" destination="OMr-SJ-0Yg" id="6io-EC-XMy"/>
                         <segue destination="IjS-vW-4dU" kind="show" id="3C5-5a-zLh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHZ-O7-lPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1914" y="-188"/>
+            <point key="canvasLocation" x="1913.0434782608697" y="-188.16964285714286"/>
         </scene>
         <!--Home-->
         <scene sceneID="ZJn-xb-3h0">
@@ -149,6 +159,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YvD-Qq-h5b"/>
+        <segue reference="3C5-5a-zLh"/>
     </inferredMetricsTieBreakers>
 </document>

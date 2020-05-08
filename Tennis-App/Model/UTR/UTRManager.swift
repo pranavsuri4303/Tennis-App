@@ -8,7 +8,7 @@
 
 import Foundation
 protocol UTRManagerDelegate {
-	func didUpdateUtrProfile(profile: Profile)
+	func didUpdateUtrProfile(profile: UTRProfile)
 	func didFailWithError(error: Error!)
 }
 
@@ -18,7 +18,6 @@ struct UTRManager {
 
 	// Fetch Profile for specific user with ID
 	func fetchProfile(withID ID: String){
-		print(ID)
 		let url = "https://app.myutr.com/api/v1/player/\(ID)"
 		performRequest(with: url)
 	}
@@ -41,12 +40,12 @@ struct UTRManager {
 		}
 	}
 
-	func parseJSON(_ userData: Data)-> Profile?{
+	func parseJSON(_ userData: Data)-> UTRProfile?{
 		let decoder = JSONDecoder()
 		do {
-			let user = try decoder.decode(ProfileResponse.self, from: userData)
+			let user = try decoder.decode(UTRProfileResponse.self, from: userData)
 			let name = "\(user.firstName) \(user.lastName)"
-			return Profile(name: name,
+			return UTRProfile(name: name,
 						   singles: user.singlesUtr,
 						   singlesStatus: user.ratingStatusSingles,
 						   singlesProgress: user.ratingProgressSingles,
