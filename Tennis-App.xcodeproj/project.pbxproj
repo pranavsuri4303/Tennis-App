@@ -124,7 +124,6 @@
 			children = (
 				FF38DA692461BE3500DC8CA9 /* AppDelegate.swift */,
 				FF38DA6B2461BE3500DC8CA9 /* SceneDelegate.swift */,
-				FFFE0AD12466D7400063727A /* Constants */,
 				FF38DA7F2461BE9C00DC8CA9 /* Model */,
 				FF38DA802461BEAA00DC8CA9 /* Controller */,
 				FF38DA812461BECD00DC8CA9 /* View */,
@@ -166,6 +165,8 @@
 		FF38DA8A2461C06E00DC8CA9 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				FFFE0ACA2466A44A0063727A /* Nationalities.swift */,
+				FFFE0ACC2466A8410063727A /* Sex.swift */,
 				FF38DA842461BF8500DC8CA9 /* WelcomeViewController.swift */,
 				FF38DA862461C04500DC8CA9 /* RegisterViewController.swift */,
 				FF38DA882461C06600DC8CA9 /* LoginViewController.swift */,
@@ -231,15 +232,6 @@
 				FFD1BDBB2465C43A0051A635 /* ITFPlayerSearchResponse.swift */,
 			);
 			path = "Player Search";
-			sourceTree = "<group>";
-		};
-		FFFE0AD12466D7400063727A /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				FFFE0ACA2466A44A0063727A /* Nationalities.swift */,
-				FFFE0ACC2466A8410063727A /* Sex.swift */,
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
