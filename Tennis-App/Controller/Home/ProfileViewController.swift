@@ -17,10 +17,15 @@ class ProfileViewController: UIViewController, UTRManagerDelegate {
 		// Do any additional setup after loading the view.
 		utrManager.delegate = self
 		utrManager.fetchProfile(withID: "1631587")
+		self.navigationItem.hidesBackButton = true
+
 
 
 	}
 
+	@IBAction func logout(_ sender: Any) {
+		self.navigationController?.popToRootViewController(animated: true)
+	}
 	func didUpdateUtrProfile(profile: UTRProfile) {
 		DispatchQueue.main.async {
 			print(profile.name)

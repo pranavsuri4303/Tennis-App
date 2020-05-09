@@ -26,7 +26,7 @@
                                             <color key="titleColor" red="0.93333333333333335" green="0.52156862745098043" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="FpY-dI-ddS" kind="show" id="wxj-Mk-9CW"/>
+                                            <segue destination="FpY-dI-ddS" kind="show" identifier="WelcomeToSignIn" id="wxj-Mk-9CW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYQ-EB-SbB" userLabel="Register">
@@ -37,7 +37,7 @@
                                             <color key="titleColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="cN4-I8-Olj" kind="show" id="fwS-HA-q0b"/>
+                                            <segue destination="cN4-I8-Olj" kind="show" identifier="WelcomeToRegister" id="fwS-HA-q0b"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -75,6 +75,9 @@
                                 <rect key="frame" x="184" y="384" width="47" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign in"/>
+                                <connections>
+                                    <action selector="signInPressed:" destination="FpY-dI-ddS" eventType="touchUpInside" id="xwO-me-fUg"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OMr-SJ-0Yg" customClass="GIDSignInButton">
                                 <rect key="frame" x="87" y="454" width="240" height="73"/>
@@ -88,12 +91,32 @@
                     <navigationItem key="navigationItem" id="5bO-XH-UTg"/>
                     <connections>
                         <outlet property="googlButton" destination="OMr-SJ-0Yg" id="6io-EC-XMy"/>
-                        <segue destination="IjS-vW-4dU" kind="show" id="3C5-5a-zLh"/>
+                        <segue destination="IjS-vW-4dU" kind="showDetail" identifier="SignInToHome" id="3C5-5a-zLh"/>
+                        <segue destination="vhn-mS-kgi" kind="show" identifier="SignInToExtra" id="1tI-di-ncl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHZ-O7-lPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1913.0434782608697" y="-188.16964285714286"/>
+            <point key="canvasLocation" x="1913" y="-224"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tTs-XX-AGb">
+            <objects>
+                <viewController id="vhn-mS-kgi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tiA-Ge-S4c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="mbn-Qc-7It"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C5z-eB-U1k"/>
+                    <connections>
+                        <segue destination="IjS-vW-4dU" kind="showDetail" identifier="ExtraToHome" id="2VU-tg-CBd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IaJ-3r-n9y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2851" y="-224"/>
         </scene>
         <!--Home-->
         <scene sceneID="ZJn-xb-3h0">
@@ -103,7 +126,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="stq-eL-V8I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2690" y="119"/>
+            <point key="canvasLocation" x="2851" y="231"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="AIR-Nf-gn9">
@@ -198,12 +221,12 @@
                         <outlet property="RPasswordField" destination="Err-Wv-gxU" id="iqC-1B-YdN"/>
                         <outlet property="SexField" destination="foI-WP-QVF" id="Hlh-pB-PMm"/>
                         <outlet property="YOBField" destination="9N7-E8-6f5" id="qee-30-xJL"/>
-                        <segue destination="IjS-vW-4dU" kind="show" id="YvD-Qq-h5b"/>
+                        <segue destination="IjS-vW-4dU" kind="showDetail" identifier="RegisterToHome" id="YvD-Qq-h5b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pd7-1B-lRC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1913.0434782608697" y="465.40178571428567"/>
+            <point key="canvasLocation" x="1913" y="522"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yFU-iA-WW6">
@@ -226,6 +249,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YvD-Qq-h5b"/>
+        <segue reference="2VU-tg-CBd"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -74,6 +74,8 @@ class RegisterViewController: UIViewController {
 				db.collection("users").document((result?.user.uid)!).setData(data) { (error) in
 					if error != nil{
 						print(error?.localizedDescription)
+					} else{
+						self.performSegue(withIdentifier: "RegisterToHome", sender: self)
 					}
 				}
 			}

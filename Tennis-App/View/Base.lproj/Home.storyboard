@@ -17,7 +17,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="IzS-Ms-Nat" kind="relationship" relationship="viewControllers" id="mde-TM-mgp"/>
+                        <segue destination="SwB-ED-8Z6" kind="relationship" relationship="viewControllers" id="6ja-8j-fLf"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="Jfw-Pt-w0x"/>
                         <segue destination="sDe-SS-W9l" kind="relationship" relationship="viewControllers" id="9RQ-RD-zeo"/>
                         <segue destination="a2d-EX-Ttc" kind="relationship" relationship="viewControllers" id="Fwb-cJ-KsY"/>
@@ -63,26 +63,202 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Play-->
+        <!--New Match-->
         <scene sceneID="U53-tl-LIi">
             <objects>
                 <viewController id="IzS-Ms-Nat" customClass="MatchViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OLY-XP-9v2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="D1J-it-TmA">
+                                <rect key="frame" x="31" y="132" width="352" height="286"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Mc8-rq-kD9">
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of Sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ni0-QH-01k">
+                                                <rect key="frame" x="0.0" y="0.0" width="206" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dbg-xe-iWh">
+                                                <rect key="frame" x="211" y="0.0" width="141" height="32"/>
+                                                <segments>
+                                                    <segment title="1"/>
+                                                    <segment title="3"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="noOfSets:" destination="IzS-Ms-Nat" eventType="valueChanged" id="dXK-K3-3eq"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Dbg-xe-iWh" firstAttribute="width" secondItem="Mc8-rq-kD9" secondAttribute="width" multiplier="0.4" id="4h1-Pj-Dui"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NzF-xD-zA6">
+                                        <rect key="frame" x="0.0" y="39" width="352" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFm-EN-ErJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="206" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRM-Nz-n4r">
+                                                <rect key="frame" x="211" y="0.0" width="141" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="aRM-Nz-n4r" firstAttribute="width" secondItem="NzF-xD-zA6" secondAttribute="width" multiplier="0.4" id="6EH-tW-gwS"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="s5I-lH-7ji">
+                                        <rect key="frame" x="0.0" y="81" width="352" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deuce/Sudden Death" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EZ-4w-9Wa">
+                                                <rect key="frame" x="0.0" y="0.0" width="206" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YaB-zb-6Ko">
+                                                <rect key="frame" x="211" y="0.0" width="141" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="YaB-zb-6Ko" firstAttribute="width" secondItem="s5I-lH-7ji" secondAttribute="width" multiplier="0.4" id="ktS-ci-Bz4"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fX3-6g-gRc">
+                                        <rect key="frame" x="0.0" y="123" width="352" height="95.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiebreak within Set?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYv-vF-vGX">
+                                                <rect key="frame" x="0.0" y="0.0" width="352" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yob-h3-pS4">
+                                                <rect key="frame" x="0.0" y="25.5" width="352" height="32"/>
+                                                <segments>
+                                                    <segment title="Yes"/>
+                                                    <segment title="No"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="TBWithinSet:" destination="IzS-Ms-Nat" eventType="valueChanged" id="QPM-Ay-p1a"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="y4F-B0-hX5">
+                                                <rect key="frame" x="0.0" y="61.5" width="352" height="34"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="At what score?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="igA-w6-1hu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="173.5" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many points?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wfl-dN-L5t">
+                                                        <rect key="frame" x="178.5" y="0.0" width="173.5" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QFj-3q-TS2">
+                                        <rect key="frame" x="0.0" y="226.5" width="352" height="59.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is final set a Tiebreak?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNg-je-Pak">
+                                                <rect key="frame" x="0.0" y="0.0" width="352" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AlS-aC-y3T">
+                                                <rect key="frame" x="0.0" y="25.5" width="352" height="34"/>
+                                                <subviews>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cmJ-DV-3Ce">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="35"/>
+                                                        <segments>
+                                                            <segment title="Yes"/>
+                                                            <segment title="No"/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="TBFinalSet:" destination="IzS-Ms-Nat" eventType="valueChanged" id="dt5-8j-STg"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How Many Points?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k6U-md-3ka">
+                                                        <rect key="frame" x="176" y="0.0" width="176" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="k6U-md-3ka" firstAttribute="width" secondItem="AlS-aC-y3T" secondAttribute="width" multiplier="0.5" id="Txl-b4-yKn"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="D1J-it-TmA" firstAttribute="top" secondItem="2ID-Jf-GRq" secondAttribute="top" multiplier="1.5" id="4Ay-et-wFA"/>
+                            <constraint firstItem="D1J-it-TmA" firstAttribute="width" secondItem="2ID-Jf-GRq" secondAttribute="width" multiplier="0.85" id="h3P-jO-CeH"/>
+                            <constraint firstItem="D1J-it-TmA" firstAttribute="centerX" secondItem="OLY-XP-9v2" secondAttribute="centerX" id="n9T-aF-mcg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2ID-Jf-GRq"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Play" image="bolt.circle.fill" catalog="system" id="F3a-uA-AxI"/>
+                    <navigationItem key="navigationItem" title="New Match" id="yBo-LS-Ed5">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="q1k-J7-bJU">
+                            <connections>
+                                <action selector="DonePressed:" destination="IzS-Ms-Nat" id="CY4-rJ-6AA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="TBFinalSetField" destination="k6U-md-3ka" id="4xz-iZ-dgp"/>
+                        <outlet property="TBWithinSetPointsField" destination="Wfl-dN-L5t" id="8HH-dv-OLu"/>
+                        <outlet property="TBWithinSetScoreField" destination="igA-w6-1hu" id="W1g-FZ-JM3"/>
+                        <outlet property="TBWithinSetStack" destination="y4F-B0-hX5" id="gXz-Hp-Pts"/>
+                        <outlet property="deuceField" destination="YaB-zb-6Ko" id="3dJ-61-IuH"/>
+                        <outlet property="finalSetStack" destination="QFj-3q-TS2" id="sVx-n9-vL6"/>
+                        <outlet property="noOfGamesField" destination="aRM-Nz-n4r" id="zzS-8q-xGo"/>
+                        <segue destination="TgJ-jX-Gjh" kind="show" identifier="NewMatchToPlayers" id="ASE-cF-06f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jW4-td-Bn7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1516" y="-321"/>
+            <point key="canvasLocation" x="3037.68115942029" y="4.6875"/>
         </scene>
-        <!--You-->
+        <!--View Controller-->
+        <scene sceneID="0sD-9F-eIr">
+            <objects>
+                <viewController id="TgJ-jX-Gjh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NvL-Qc-8cD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uJN-6t-thi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nqd-gf-nxf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Raq-dq-3HA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3770" y="5"/>
+        </scene>
+        <!--Profile-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController title="You" id="8rJ-Kc-sve" customClass="ProfileViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="ProfileViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,6 +274,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUh-w8-V8M">
+                                <rect key="frame" x="345" y="50" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logout:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="rZ8-Cf-Ob6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -109,6 +293,7 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.circle.fill" catalog="system" id="cPa-gy-q4n"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,7 +329,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5E6-zJ-oZ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2242" y="5"/>
+            <point key="canvasLocation" x="1516" y="-320"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ueA-4E-Qgr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SwB-ED-8Z6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="bolt.circle.fill" catalog="system" id="bJR-n1-vGG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dzc-0b-blk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IzS-Ms-Nat" kind="relationship" relationship="rootViewController" id="jik-pC-U6D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYq-ts-8jh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2303" y="5"/>
         </scene>
     </scenes>
     <resources>

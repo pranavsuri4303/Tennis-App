@@ -28,6 +28,10 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
 		googlButton.style = GIDSignInButtonStyle(rawValue: 1)!
 	}
 
+	@IBAction func signInPressed(_ sender: UIButton) {
+		self.performSegue(withIdentifier: "SignInToHome", sender: self)
+	}
+
 	func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
 		if let error = error {
             print(error.localizedDescription)
