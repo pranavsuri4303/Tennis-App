@@ -10,15 +10,19 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-	@IBOutlet weak var signinButton: UIButton!
+	@IBOutlet weak var signInButton: UIButton!
 	@IBOutlet weak var registerButton: UIButton!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		// Do any additional setup after loading the view.
-		signinButton.layer.cornerRadius = 10
+		// Make the buttons rounded.
+		signInButton.layer.cornerRadius = 10
 		registerButton.layer.cornerRadius = 10
+
+	}
+	override func viewWillAppear(_ animated: Bool) {
+		self.navigationController?.setNavigationBarHidden(true, animated: animated)
 	}
 
 

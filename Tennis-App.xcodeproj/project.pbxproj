@@ -33,6 +33,8 @@
 		FFD1BDBA2465C4230051A635 /* ITFPlayerSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BDB92465C4230051A635 /* ITFPlayerSearch.swift */; };
 		FFD1BDBC2465C43B0051A635 /* ITFPlayerSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BDBB2465C43A0051A635 /* ITFPlayerSearchResponse.swift */; };
 		FFD1BDBF2465D71B0051A635 /* ITFProfileOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BDBE2465D71B0051A635 /* ITFProfileOverview.swift */; };
+		FFFE0ACB2466A44A0063727A /* Nationalities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE0ACA2466A44A0063727A /* Nationalities.swift */; };
+		FFFE0ACD2466A8410063727A /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE0ACC2466A8410063727A /* Sex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		FFD1BDB92465C4230051A635 /* ITFPlayerSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFPlayerSearch.swift; sourceTree = "<group>"; };
 		FFD1BDBB2465C43A0051A635 /* ITFPlayerSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFPlayerSearchResponse.swift; sourceTree = "<group>"; };
 		FFD1BDBE2465D71B0051A635 /* ITFProfileOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFProfileOverview.swift; sourceTree = "<group>"; };
+		FFFE0ACA2466A44A0063727A /* Nationalities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nationalities.swift; sourceTree = "<group>"; };
+		FFFE0ACC2466A8410063727A /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 			children = (
 				FF38DA692461BE3500DC8CA9 /* AppDelegate.swift */,
 				FF38DA6B2461BE3500DC8CA9 /* SceneDelegate.swift */,
+				FFFE0AD12466D7400063727A /* Constants */,
 				FF38DA7F2461BE9C00DC8CA9 /* Model */,
 				FF38DA802461BEAA00DC8CA9 /* Controller */,
 				FF38DA812461BECD00DC8CA9 /* View */,
@@ -226,6 +231,15 @@
 				FFD1BDBB2465C43A0051A635 /* ITFPlayerSearchResponse.swift */,
 			);
 			path = "Player Search";
+			sourceTree = "<group>";
+		};
+		FFFE0AD12466D7400063727A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FFFE0ACA2466A44A0063727A /* Nationalities.swift */,
+				FFFE0ACC2466A8410063727A /* Sex.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +389,7 @@
 				FFD1BDB22465C2B90051A635 /* ITFProfOverviewResponse.swift in Sources */,
 				FFD1BDAE2465C27A0051A635 /* ITFManager.swift in Sources */,
 				FF38DA932461DB1B00DC8CA9 /* UTRManager.swift in Sources */,
+				FFFE0ACD2466A8410063727A /* Sex.swift in Sources */,
 				FFD1BDB42465C3D60051A635 /* ITFCalendar.swift in Sources */,
 				FFD1BDB62465C3E70051A635 /* ITFCalendarResponse.swift in Sources */,
 				FF38DA6A2461BE3500DC8CA9 /* AppDelegate.swift in Sources */,
@@ -382,6 +397,7 @@
 				FF38DA6C2461BE3500DC8CA9 /* SceneDelegate.swift in Sources */,
 				FFD1BDBC2465C43B0051A635 /* ITFPlayerSearchResponse.swift in Sources */,
 				FF38DA972461DB4200DC8CA9 /* UTRProfileResponse.swift in Sources */,
+				FFFE0ACB2466A44A0063727A /* Nationalities.swift in Sources */,
 				FF38DA852461BF8500DC8CA9 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -44,5 +44,10 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
         }
 	}
 
+	override func viewWillAppear(_ animated: Bool) {
+		self.navigationController?.setNavigationBarHidden(false, animated: animated)
+	}
+
+
 
 }
