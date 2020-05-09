@@ -118,7 +118,6 @@ class MatchViewController: UIViewController{
 		}
 	}
 	@IBAction func DonePressed(_ sender: Any) {
-		MatchStructure(sets: 1, games: self.noOfGamesField.text!, deuce: self.deuceField.text!, TBWithinSet: true, TBWithinSetAt: self.TBWithinSetScoreField.text!, TBWithinSetPoints: self.TBWithinSetPointsField.text!, thirdSetExist: true, thirdSetTB: self.TBFinalSetField.text!)
 		self.performSegue(withIdentifier: "NewMatchToPlayers", sender: self)
 	}
 }

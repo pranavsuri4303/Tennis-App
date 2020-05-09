@@ -35,8 +35,7 @@
 		FFD1BDBF2465D71B0051A635 /* ITFProfileOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BDBE2465D71B0051A635 /* ITFProfileOverview.swift */; };
 		FFFE0ACB2466A44A0063727A /* Nationalities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE0ACA2466A44A0063727A /* Nationalities.swift */; };
 		FFFE0ACD2466A8410063727A /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE0ACC2466A8410063727A /* Sex.swift */; };
-		FFFE0AD32467355B0063727A /* MatchStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE0AD22467355B0063727A /* MatchStructure.swift */; };
-		FFFE0AD624673AE20063727A /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE0AD524673AE20063727A /* PlayersViewController.swift */; };
+		FFFE0AD824673C630063727A /* PlayerSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE0AD724673C630063727A /* PlayerSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,8 +71,7 @@
 		FFD1BDBE2465D71B0051A635 /* ITFProfileOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFProfileOverview.swift; sourceTree = "<group>"; };
 		FFFE0ACA2466A44A0063727A /* Nationalities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nationalities.swift; sourceTree = "<group>"; };
 		FFFE0ACC2466A8410063727A /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
-		FFFE0AD22467355B0063727A /* MatchStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchStructure.swift; sourceTree = "<group>"; };
-		FFFE0AD524673AE20063727A /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		FFFE0AD724673C630063727A /* PlayerSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,8 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				FF38DA8C2461C85400DC8CA9 /* MatchViewController.swift */,
-				FFFE0AD22467355B0063727A /* MatchStructure.swift */,
-				FFFE0AD524673AE20063727A /* PlayersViewController.swift */,
+				FFFE0AD724673C630063727A /* PlayerSelectionViewController.swift */,
 			);
 			path = "New Match";
 			sourceTree = "<group>";
@@ -383,7 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFFE0AD624673AE20063727A /* PlayersViewController.swift in Sources */,
+				FFFE0AD824673C630063727A /* PlayerSelectionViewController.swift in Sources */,
 				FF38DA8D2461C85400DC8CA9 /* MatchViewController.swift in Sources */,
 				FFD1BDBA2465C4230051A635 /* ITFPlayerSearch.swift in Sources */,
 				FFD1BDBF2465D71B0051A635 /* ITFProfileOverview.swift in Sources */,
@@ -402,7 +399,6 @@
 				FF38DA6A2461BE3500DC8CA9 /* AppDelegate.swift in Sources */,
 				FF38DA872461C04500DC8CA9 /* RegisterViewController.swift in Sources */,
 				FF38DA6C2461BE3500DC8CA9 /* SceneDelegate.swift in Sources */,
-				FFFE0AD32467355B0063727A /* MatchStructure.swift in Sources */,
 				FFD1BDBC2465C43B0051A635 /* ITFPlayerSearchResponse.swift in Sources */,
 				FF38DA972461DB4200DC8CA9 /* UTRProfileResponse.swift in Sources */,
 				FFFE0ACB2466A44A0063727A /* Nationalities.swift in Sources */,

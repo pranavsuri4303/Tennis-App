@@ -1,5 +1,5 @@
 //
-//  Players.swift
+//  PlayerSelectionViewController.swift
 //  Tennis-App
 //
 //  Created by Pranav  Suri on 10/5/20.
@@ -8,12 +8,9 @@
 
 import UIKit
 
-class PlayersViewController: UIViewController {
-	let matchFormat = MatchStructure()
-
+class PlayerSelectionViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		print(matchFormat.sets)
 	}
 }
