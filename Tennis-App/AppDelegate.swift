@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
-import FIRAuth
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,17 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Override point for customization after application launch.
 		// Use Firebase library to configure APIs
 		FirebaseApp.configure()
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-		if Auth.auth().currentUser != nil {
-			
-		}
+		GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+		
 		return true
 	}
 	
 	@available(iOS 9.0, *)
 	func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
-	  -> Bool {
-	  return GIDSignIn.sharedInstance().handle(url)
+		-> Bool {
+			return GIDSignIn.sharedInstance().handle(url)
 	}
 
 	// MARK: UISceneSession Lifecycle

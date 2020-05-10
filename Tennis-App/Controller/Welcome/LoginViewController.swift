@@ -44,6 +44,10 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
                 print(error.localizedDescription)
             } else {
                 print("LoginSuccess")
+                let story = UIStoryboard(name: "Home", bundle: nil)
+
+                           let vc = story.instantiateViewController(identifier: "tab") as UITabBarController
+                self.present(vc,animated: true,completion: nil)
             }
         }
 	}

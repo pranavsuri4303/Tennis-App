@@ -10,7 +10,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Hiu-Ak-ztC">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="jRf-uu-JA3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tab" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jRf-uu-JA3" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HtE-4l-FTG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -31,7 +31,7 @@
         <!--History-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="History" id="9pv-A4-QxB" userLabel="History" customClass="HistoryViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="his" title="History" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9pv-A4-QxB" userLabel="History" customClass="HistoryViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -274,9 +274,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUh-w8-V8M">
-                                <rect key="frame" x="345" y="50" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUh-w8-V8M">
+                                <rect key="frame" x="354" y="52" width="52" height="30"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
                                     <action selector="logout:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="rZ8-Cf-Ob6"/>
@@ -286,7 +285,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="vUh-w8-V8M" secondAttribute="trailing" constant="8" id="EF3-cA-P46"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
+                            <constraint firstItem="vUh-w8-V8M" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="8" id="nEn-T6-wsP"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>

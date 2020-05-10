@@ -69,9 +69,10 @@ class RegisterViewController: UIViewController {
 					"YOB": self.YOBField.text!,
 					"Sex": self.SexField.text!,
 					"Nationality": self.NationalityField.text!,
-					"Email": result!.user.email!,
+					"Email": result?.user.email,
+					"UID": result!.user.uid
 					]
-				db.collection("users").document((result?.user.uid)!).setData(data) { (error) in
+				db.collection("users").document((result?.user.email)!).setData(data) { (error) in
 					if error != nil{
 						print(error?.localizedDescription)
 					} else{
