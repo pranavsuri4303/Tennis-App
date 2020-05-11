@@ -10,7 +10,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="Ten-t3-sf6">
             <objects>
-                <viewController storyboardIdentifier="welcome" id="VWa-uo-ruw" customClass="WelcomeViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcome" modalTransitionStyle="crossDissolve" id="VWa-uo-ruw" customClass="WelcomeViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OkT-7m-CZg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,7 @@
         <!--Login View Controller-->
         <scene sceneID="9Ln-oK-SOB">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="pageSheet" id="FpY-dI-ddS" customClass="LoginViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="FpY-dI-ddS" customClass="LoginViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="28b-yE-Weh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,68 +131,72 @@
         <!--Register View Controller-->
         <scene sceneID="AIR-Nf-gn9">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="cN4-I8-Olj" customClass="RegisterViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="cN4-I8-Olj" customClass="RegisterViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y2Z-vl-ceZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="89j-VL-BK5">
-                                <rect key="frame" x="41.5" y="235" width="331" height="426"/>
+                                <rect key="frame" x="41.5" y="216" width="331" height="464"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="26B-SE-Owh">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="37.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8kp-nZ-NI1" userLabel="FName">
-                                        <rect key="frame" x="0.0" y="39.5" width="331" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8kp-nZ-NI1" userLabel="FName" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="42.5" width="331" height="37.5"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="given-name"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Hi"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="HFw-so-2T8" userLabel="LName">
-                                        <rect key="frame" x="0.0" y="78.5" width="331" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="HFw-so-2T8" userLabel="LName" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="85" width="331" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="family-name"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year of Birth (YYYY)" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9N7-E8-6f5">
-                                        <rect key="frame" x="0.0" y="117.5" width="331" height="34.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year of Birth (YYYY)" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9N7-E8-6f5" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="128" width="331" height="37.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sex" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="foI-WP-QVF" userLabel="Sex">
-                                        <rect key="frame" x="0.0" y="157" width="331" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sex" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="foI-WP-QVF" userLabel="Sex" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="170.5" width="331" height="37.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nationality" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GmX-hm-OP2">
-                                        <rect key="frame" x="0.0" y="196" width="331" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nationality" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GmX-hm-OP2" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="213" width="331" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="B8f-0Y-4aO">
-                                        <rect key="frame" x="0.0" y="235" width="331" height="34"/>
+                                        <rect key="frame" x="0.0" y="256" width="331" height="37.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="1Fq-Hb-Wdd">
-                                        <rect key="frame" x="0.0" y="274" width="331" height="34.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="1Fq-Hb-Wdd" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="298.5" width="331" height="37.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-cb-ALv">
-                                        <rect key="frame" x="0.0" y="313.5" width="331" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-cb-ALv" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="341" width="331" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES" textContentType="new-password"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repaeat Password" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Err-Wv-gxU" userLabel="RPassword">
-                                        <rect key="frame" x="0.0" y="352.5" width="331" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repaeat Password" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Err-Wv-gxU" userLabel="RPassword" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="384" width="331" height="37.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="new-password"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZe-QF-JeY">
-                                        <rect key="frame" x="0.0" y="391.5" width="331" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="426.5" width="331" height="37.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Register"/>
                                         <connections>
@@ -204,7 +208,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="89j-VL-BK5" firstAttribute="height" secondItem="Z8J-gA-rCB" secondAttribute="height" multiplier="0.55" id="LfT-JP-0uj"/>
+                            <constraint firstItem="89j-VL-BK5" firstAttribute="height" secondItem="Z8J-gA-rCB" secondAttribute="height" multiplier="0.6" id="LfT-JP-0uj"/>
                             <constraint firstItem="89j-VL-BK5" firstAttribute="centerY" secondItem="Y2Z-vl-ceZ" secondAttribute="centerY" id="swo-gP-T7g"/>
                             <constraint firstItem="89j-VL-BK5" firstAttribute="centerX" secondItem="Y2Z-vl-ceZ" secondAttribute="centerX" id="xa5-eU-5PH"/>
                             <constraint firstItem="89j-VL-BK5" firstAttribute="width" secondItem="Z8J-gA-rCB" secondAttribute="width" multiplier="0.8" id="zmt-IP-WYN"/>
@@ -214,7 +218,7 @@
                     <navigationItem key="navigationItem" id="LL3-of-n2d"/>
                     <connections>
                         <outlet property="EmailField" destination="1Fq-Hb-Wdd" id="YGA-nc-S2B"/>
-                        <outlet property="FNameField" destination="8kp-nZ-NI1" id="67Z-dQ-JB2"/>
+                        <outlet property="FNameField" destination="8kp-nZ-NI1" id="jDu-wr-woI"/>
                         <outlet property="LNameField" destination="HFw-so-2T8" id="X3r-4v-dzF"/>
                         <outlet property="NationalityField" destination="GmX-hm-OP2" id="hea-aU-G1k"/>
                         <outlet property="PasswordField" destination="9Tf-cb-ALv" id="lso-az-xIk"/>
@@ -249,6 +253,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2VU-tg-CBd"/>
+        <segue reference="YvD-Qq-h5b"/>
     </inferredMetricsTieBreakers>
 </document>

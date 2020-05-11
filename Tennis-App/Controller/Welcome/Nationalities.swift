@@ -8,7 +8,8 @@
 
 import Foundation
 struct Nationalities {
-	var list = ["Afghanistan",
+	var list = ["",
+				"Afghanistan",
 				"Åland Islands",
 				"Albania",
 				"Algeria",

@@ -26,6 +26,7 @@
 		FF38DA952461DB3100DC8CA9 /* UTRProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA942461DB3100DC8CA9 /* UTRProfile.swift */; };
 		FF38DA972461DB4200DC8CA9 /* UTRProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA962461DB4200DC8CA9 /* UTRProfileResponse.swift */; };
 		FF98791E2462F70A00A01C9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF98791D2462F70A00A01C9C /* GoogleService-Info.plist */; };
+		FFBDA09B2468B8C100539CE5 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBDA09A2468B8C100539CE5 /* Validators.swift */; };
 		FFD1BDAE2465C27A0051A635 /* ITFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BDAD2465C27A0051A635 /* ITFManager.swift */; };
 		FFD1BDB22465C2B90051A635 /* ITFProfOverviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BDB12465C2B90051A635 /* ITFProfOverviewResponse.swift */; };
 		FFD1BDB42465C3D60051A635 /* ITFCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BDB32465C3D60051A635 /* ITFCalendar.swift */; };
@@ -62,6 +63,7 @@
 		FF38DA942461DB3100DC8CA9 /* UTRProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTRProfile.swift; sourceTree = "<group>"; };
 		FF38DA962461DB4200DC8CA9 /* UTRProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTRProfileResponse.swift; sourceTree = "<group>"; };
 		FF98791D2462F70A00A01C9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FFBDA09A2468B8C100539CE5 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		FFD1BDAD2465C27A0051A635 /* ITFManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFManager.swift; sourceTree = "<group>"; };
 		FFD1BDB12465C2B90051A635 /* ITFProfOverviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFProfOverviewResponse.swift; sourceTree = "<group>"; };
 		FFD1BDB32465C3D60051A635 /* ITFCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFCalendar.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				FF38DA842461BF8500DC8CA9 /* WelcomeViewController.swift */,
 				FF38DA862461C04500DC8CA9 /* RegisterViewController.swift */,
 				FF38DA882461C06600DC8CA9 /* LoginViewController.swift */,
+				FFBDA09A2468B8C100539CE5 /* Validators.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				FF38DA872461C04500DC8CA9 /* RegisterViewController.swift in Sources */,
 				FF38DA6C2461BE3500DC8CA9 /* SceneDelegate.swift in Sources */,
 				FFD1BDBC2465C43B0051A635 /* ITFPlayerSearchResponse.swift in Sources */,
+				FFBDA09B2468B8C100539CE5 /* Validators.swift in Sources */,
 				FF38DA972461DB4200DC8CA9 /* UTRProfileResponse.swift in Sources */,
 				FFFE0ACB2466A44A0063727A /* Nationalities.swift in Sources */,
 				FF38DA852461BF8500DC8CA9 /* WelcomeViewController.swift in Sources */,

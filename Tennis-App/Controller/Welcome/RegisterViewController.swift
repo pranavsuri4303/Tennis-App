@@ -9,21 +9,45 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import ProgressHUD
+import Navajo_Swift
+import SkyFloatingLabelTextField
 
 class RegisterViewController: UIViewController {
 
+	let V = Validators()
+
+	let textFields = ["FName",
+					  "LName",
+					  "YOB",
+					  "Sex",
+					  "Nationality",
+					  "Email",
+					  "Password",
+					  "RPassword"
+	]
+
+	var errors = [true,
+				  true,
+				  true,
+				  true,
+				  true,
+				  true,
+				  true,
+				  true
+	]
 
 	// Personal Details
-	@IBOutlet weak var FNameField: UITextField!
-	@IBOutlet weak var LNameField: UITextField!
-	@IBOutlet weak var YOBField: UITextField!
-	@IBOutlet weak var SexField: UITextField!
-	@IBOutlet weak var NationalityField: UITextField!
+	@IBOutlet weak var FNameField: SkyFloatingLabelTextField!
+	@IBOutlet weak var LNameField: SkyFloatingLabelTextField!
+	@IBOutlet weak var YOBField: SkyFloatingLabelTextField!
+	@IBOutlet weak var SexField: SkyFloatingLabelTextField!
+	@IBOutlet weak var NationalityField: SkyFloatingLabelTextField!
 
 	// Login Details
-	@IBOutlet weak var EmailField: UITextField!
-	@IBOutlet weak var PasswordField: UITextField!
-	@IBOutlet weak var RPasswordField: UITextField!
+	@IBOutlet weak var EmailField: SkyFloatingLabelTextField!
+	@IBOutlet weak var PasswordField: SkyFloatingLabelTextField!
+	@IBOutlet weak var RPasswordField: SkyFloatingLabelTextField!
 
 	// Naionality Picker
 	let nationalities = Nationalities()
@@ -58,29 +82,49 @@ class RegisterViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		self.navigationController?.setNavigationBarHidden(false, animated: animated)
 	}
+
 	@IBAction func registerPressed(_ sender: UIButton) {
-		Auth.auth().createUser(withEmail: EmailField.text!, password: PasswordField.text!) { (result, err) in
-			if err != nil{
-				print(err?.localizedDescription as Any)
-			} else {
-				let db = Firestore.firestore()
-				let data = [
-					"Name": "\(self.FNameField.text!) \(self.LNameField.text!)",
-					"YOB": self.YOBField.text!,
-					"Sex": self.SexField.text!,
-					"Nationality": self.NationalityField.text!,
-					"Email": result?.user.email,
-					"UID": result!.user.uid
-					]
-				db.collection("users").document((result?.user.email)!).setData(data) { (error) in
-					if error != nil{
-						print(error?.localizedDescription)
-					} else{
-						self.performSegue(withIdentifier: "RegisterToHome", sender: self)
-					}
-				}
+		var errFields = [""]
+		if (RPasswordField.text != PasswordField.text) || (RPasswordField.text?.count == 0){
+			errors[7] = true
+		}else{
+			errors[7] = false
+		}
+		for index in 0...7{
+			if errors[index]{
+				errFields.append(textFields[index])
+			}
+			if index == 7 {
+				errFields.remove(at: 0)
 			}
 		}
+		print(errFields)
+		if errFields.count == 1{
+			print(errFields)
+		}
+
+//		Auth.auth().createUser(withEmail: EmailField.text!, password: PasswordField.text!) { (result, err) in
+//			if err != nil{
+//				print(err?.localizedDescription as Any)
+//			} else {
+//				let db = Firestore.firestore()
+//				let data = [
+//					"Name": "\(self.FNameField.text!) \(self.LNameField.text!)",
+//					"YOB": self.YOBField.text!,
+//					"Sex": self.SexField.text!,
+//					"Nationality": self.NationalityField.text!,
+//					"Email": result?.user.email,
+//					"UID": result!.user.uid
+//				]
+//				db.collection("users").document((result?.user.email)!).setData(data) { (error) in
+//					if error != nil{
+//						print(error?.localizedDescription)
+//					} else{
+//						self.performSegue(withIdentifier: "RegisterToHome", sender: self)
+//					}
+//				}
+//			}
+//		}
 	}
 
 }
@@ -126,26 +170,70 @@ extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource{
 
 //MARK: Text Field Delegation
 extension RegisterViewController: UITextFieldDelegate{
-	func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+
+	func errorAssigner(_ textField: UITextField){
 		switch textField {
 		case FNameField:
-			print(FNameField.text as Any)
+			if FNameField.text?.count == 0{
+				print("Invalid Fname")
+				self.errors[0] = true
+			} else{
+				print("Valid FName")
+				self.errors[0] = false
+			}
 		case LNameField:
-			print(LNameField.text as Any)
+			if LNameField.text?.count == 0{
+				print("Invalid LName")
+				self.errors[1] = true
+			} else{
+				print("Valid LName")
+				self.errors[1] = false
+			}
 		case YOBField:
-			print(YOBField.text as Any)
+			if V.YOB.validate(YOBField.text!) != nil{
+				print("Invalid YOB")
+				self.errors[2] = true
+			} else{
+				print("Valid YOB")
+				self.errors[2] = false
+			}
 		case SexField:
-			print(SexField.text as Any)
+			if SexField.text?.count == 0{
+				print("Invalid Sex")
+				self.errors[3] = true
+			} else{
+				print("Valid Sex")
+				self.errors[3] = false
+			}
 		case NationalityField:
-			print(NationalityField.text as Any)
+			if NationalityField.text?.count == 0{
+				print("Invalid Nationality")
+				self.errors[4] = true
+			} else{
+				print("Valid Nationality")
+				self.errors[4] = false
+			}
 		case EmailField:
-			print(EmailField.text as Any)
+			if (EmailField.text?.count == 0) || !(V.isValidEmail((EmailField.text)!)){
+				print("Invalid Email")
+				self.errors[5] = true
+			} else{
+				print("Valid Email")
+				self.errors[5] = false
+			}
 		case PasswordField:
-			print(PasswordField.text as Any)
-		case RPasswordField:
-			print(RPasswordField.text as Any)
+			if V.password.validate(PasswordField.text!) != nil{
+				print("Invalid Password")
+				self.errors[6] = true
+			} else{
+				print("Valid Password")
+				self.errors[6] = false
+			}
 		default:
-			print("\(FNameField.text ?? "") \(LNameField.text ?? "")")
+			print("RIP")
 		}
+	}
+	func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+		self.errorAssigner(textField)
 	}
 }

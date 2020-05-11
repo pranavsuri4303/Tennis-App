@@ -9,6 +9,11 @@ target 'Tennis-App' do
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'GoogleSignIn'
-
+pod 'IQKeyboardManagerSwift'
+pod 'ProgressHUD'
+pod 'SkyFloatingLabelTextField'
+pod 'MBProgressHUD', '~> 1.2.0'
+pod 'Navajo-Swift'
+pod 'TextFieldEffects'
 
 end

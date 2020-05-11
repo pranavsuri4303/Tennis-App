@@ -18,7 +18,6 @@ class ProfileViewController: UIViewController, UTRManagerDelegate {
 		// Do any additional setup after loading the view.
 		utrManager.delegate = self
 		utrManager.fetchProfile(withID: "1631587")
-		self.navigationItem.hidesBackButton = true
 
 
 

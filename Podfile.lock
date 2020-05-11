@@ -256,18 +256,30 @@ PODS:
   - GTMSessionFetcher/Core (1.4.0)
   - GTMSessionFetcher/Full (1.4.0):
     - GTMSessionFetcher/Core (= 1.4.0)
+  - IQKeyboardManagerSwift (6.5.5)
   - leveldb-library (1.22)
+  - MBProgressHUD (1.2.0)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - Navajo-Swift (2.1.0)
+  - ProgressHUD (2.70)
   - PromisesObjC (1.2.8)
+  - SkyFloatingLabelTextField (3.8.0)
+  - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - GoogleSignIn
+  - IQKeyboardManagerSwift
+  - MBProgressHUD (~> 1.2.0)
+  - Navajo-Swift
+  - ProgressHUD
+  - SkyFloatingLabelTextField
+  - TextFieldEffects
 
 SPEC REPOS:
   trunk:
@@ -289,9 +301,15 @@ SPEC REPOS:
     - gRPC-Core
     - GTMAppAuth
     - GTMSessionFetcher
+    - IQKeyboardManagerSwift
     - leveldb-library
+    - MBProgressHUD
     - nanopb
+    - Navajo-Swift
+    - ProgressHUD
     - PromisesObjC
+    - SkyFloatingLabelTextField
+    - TextFieldEffects
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -312,10 +330,16 @@ SPEC CHECKSUMS:
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  Navajo-Swift: 57b93e73efbfbf452433efbff04402de56beff51
+  ProgressHUD: e603e8b8622c47d8818b9fb38b3cfe9d3e7ca421
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 9f1fe76b6465254cefd7b393b0e568b4a137de2d
+PODFILE CHECKSUM: cbeceeb39791af6e6bed5c74a4f13f218204d80e
 
 COCOAPODS: 1.9.1

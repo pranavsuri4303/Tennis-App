@@ -11,12 +11,12 @@ import UIKit
 class MatchViewController: UIViewController{
 
 	// Data for Picker View
-	let noOfGamesData = [4,6,8]
-	let TB = [7,10]
-	let TBat0 = ["3-3","4-4","5-5","6-6"]
-	let TBat1 = ["5-5","6-6","7-7","8-8"]
-	let TBat2 = ["7-7","8-8","9-9","10-10"]
-	let deuceData = ["Deuce","Sudden Death","1 Deuce Only"]
+	let noOfGamesData = ["","4","6","8"]
+	let TB = ["","7","10"]
+	let TBat0 = ["","3-3","4-4","5-5","6-6"]
+	let TBat1 = ["","5-5","6-6","7-7","8-8"]
+	let TBat2 = ["","7-7","8-8","9-9","10-10"]
+	let deuceData = ["","Deuce","Sudden Death","1 Deuce Only"]
 
 
 
@@ -159,9 +159,9 @@ extension MatchViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 		case TBWithinSetPicker:
 			return TBat0.count
 		case TBWithinSetPointsPicker:
-			return 2
+			return 3
 		case TBFinalSetPicker:
-			return 2
+			return 3
 		default:
 			return 0
 		}
@@ -195,26 +195,45 @@ extension MatchViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		switch pickerView {
 		case gamesPicker:
-			self.noOfGamesField.text = String(noOfGamesData[row])
-			self.TBWithinSetScoreField.text = ""
-		case deucePicker:
-			self.deuceField.text = deuceData[row]
-		case TBWithinSetPicker:
-			switch noOfGamesField.text {
-			case "4":
-				self.TBWithinSetScoreField.text = TBat0[row]
-			case "6":
-				self.TBWithinSetScoreField.text = TBat1[row]
-			case "8":
-				self.TBWithinSetScoreField.text = TBat2[row]
-			default:
-				return self.TBWithinSetScoreField.text = TBat0[row]
+			if row == 0{
+				self.noOfGamesField.text = nil
+			} else{
+				self.noOfGamesField.text = noOfGamesData[row]
+				self.TBWithinSetScoreField.text = nil
 			}
-
+		case deucePicker:
+			if row == 0{
+				self.deuceField.text = nil
+			} else{
+				self.deuceField.text = deuceData[row]
+			}
+		case TBWithinSetPicker:
+			if row == 0{
+				self.TBWithinSetScoreField.text = nil
+			}else{
+				switch noOfGamesField.text {
+				case "4":
+					self.TBWithinSetScoreField.text = TBat0[row]
+				case "6":
+					self.TBWithinSetScoreField.text = TBat1[row]
+				case "8":
+					self.TBWithinSetScoreField.text = TBat2[row]
+				default:
+					return self.TBWithinSetScoreField.text = TBat0[row]
+				}
+			}
 		case TBWithinSetPointsPicker:
-			self.TBWithinSetPointsField.text = String(TB[row])
+			if row == 0{
+				self.TBWithinSetPointsField.text = nil
+			} else{
+				self.TBWithinSetPointsField.text = TB[row]
+			}
 		case TBFinalSetPicker:
-			self.TBFinalSetField.text = String(TB[row])
+			if row == 0 {
+				self.TBFinalSetField.text = nil
+			} else{
+				self.TBFinalSetField.text = TB[row]
+			}
 		default: break
 		}
 	}

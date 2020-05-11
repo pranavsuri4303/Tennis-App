@@ -8,6 +8,7 @@
 
 import Foundation
 struct Sex {
-	var type = ["Male",
+	var type = ["",
+				"Male",
 				"Female"]
 }
