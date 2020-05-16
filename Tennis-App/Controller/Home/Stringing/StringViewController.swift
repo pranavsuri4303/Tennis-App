@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
-class CommunityViewController: UIViewController {
+class StringViewController: UIViewController {
+	let db = Firestore.firestore()
 
+	@IBOutlet weak var TableView: UITableView!
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 
 	}
 
+	@IBAction func addString(_ sender: Any) {
+	}
 
 }
+
+

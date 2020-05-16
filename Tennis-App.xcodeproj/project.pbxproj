@@ -20,12 +20,21 @@
 		FF38DA872461C04500DC8CA9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA862461C04500DC8CA9 /* RegisterViewController.swift */; };
 		FF38DA892461C06600DC8CA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA882461C06600DC8CA9 /* LoginViewController.swift */; };
 		FF38DA8D2461C85400DC8CA9 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA8C2461C85400DC8CA9 /* MatchViewController.swift */; };
-		FF38DA8F2461C93E00DC8CA9 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA8E2461C93E00DC8CA9 /* CommunityViewController.swift */; };
+		FF38DA8F2461C93E00DC8CA9 /* StringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA8E2461C93E00DC8CA9 /* StringViewController.swift */; };
 		FF38DA912461CD8F00DC8CA9 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA902461CD8F00DC8CA9 /* PlayersViewController.swift */; };
 		FF38DA932461DB1B00DC8CA9 /* UTRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA922461DB1B00DC8CA9 /* UTRManager.swift */; };
 		FF38DA952461DB3100DC8CA9 /* UTRProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA942461DB3100DC8CA9 /* UTRProfile.swift */; };
 		FF38DA972461DB4200DC8CA9 /* UTRProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA962461DB4200DC8CA9 /* UTRProfileResponse.swift */; };
-		FF98791E2462F70A00A01C9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF98791D2462F70A00A01C9C /* GoogleService-Info.plist */; };
+		FF51207F246F052B00DE5EC9 /* AddStringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF51207E246F052B00DE5EC9 /* AddStringViewController.swift */; };
+		FF512082246F09FC00DE5EC9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF512081246F09FC00DE5EC9 /* Extensions.swift */; };
+		FF65C76C246DC03400B89093 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF65C76B246DC03400B89093 /* GoogleService-Info.plist */; };
+		FF65C76E246DCAE900B89093 /* ConnectUTR.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C76D246DCAE900B89093 /* ConnectUTR.swift */; };
+		FF65C773246DCC8C00B89093 /* UTRSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C772246DCC8C00B89093 /* UTRSearch.swift */; };
+		FF65C775246DCC9D00B89093 /* UTRSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C774246DCC9D00B89093 /* UTRSearchResponse.swift */; };
+		FF68BE83246E8A1F007D5E4A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68BE82246E8A1F007D5E4A /* TabBarViewController.swift */; };
+		FF68BE86246E909B007D5E4A /* AdditionalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68BE85246E909B007D5E4A /* AdditionalInfoViewController.swift */; };
+		FF68BE88246E9795007D5E4A /* ResetPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68BE87246E9795007D5E4A /* ResetPWViewController.swift */; };
+		FF68BE8A246E9FC1007D5E4A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68BE89246E9FC1007D5E4A /* SettingsViewController.swift */; };
 		FFBDA09B2468B8C100539CE5 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBDA09A2468B8C100539CE5 /* Validators.swift */; };
 		FFD1BDAE2465C27A0051A635 /* ITFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BDAD2465C27A0051A635 /* ITFManager.swift */; };
 		FFD1BDB22465C2B90051A635 /* ITFProfOverviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BDB12465C2B90051A635 /* ITFProfOverviewResponse.swift */; };
@@ -35,7 +44,7 @@
 		FFD1BDBC2465C43B0051A635 /* ITFPlayerSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BDBB2465C43A0051A635 /* ITFPlayerSearchResponse.swift */; };
 		FFD1BDBF2465D71B0051A635 /* ITFProfileOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BDBE2465D71B0051A635 /* ITFProfileOverview.swift */; };
 		FFFE0ACB2466A44A0063727A /* Nationalities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE0ACA2466A44A0063727A /* Nationalities.swift */; };
-		FFFE0ACD2466A8410063727A /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE0ACC2466A8410063727A /* Sex.swift */; };
+		FFFE0ACD2466A8410063727A /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE0ACC2466A8410063727A /* Gender.swift */; };
 		FFFE0AD824673C630063727A /* PlayerSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE0AD724673C630063727A /* PlayerSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,12 +66,21 @@
 		FF38DA862461C04500DC8CA9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FF38DA882461C06600DC8CA9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FF38DA8C2461C85400DC8CA9 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
-		FF38DA8E2461C93E00DC8CA9 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		FF38DA8E2461C93E00DC8CA9 /* StringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringViewController.swift; sourceTree = "<group>"; };
 		FF38DA902461CD8F00DC8CA9 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		FF38DA922461DB1B00DC8CA9 /* UTRManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTRManager.swift; sourceTree = "<group>"; };
 		FF38DA942461DB3100DC8CA9 /* UTRProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTRProfile.swift; sourceTree = "<group>"; };
 		FF38DA962461DB4200DC8CA9 /* UTRProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTRProfileResponse.swift; sourceTree = "<group>"; };
-		FF98791D2462F70A00A01C9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FF51207E246F052B00DE5EC9 /* AddStringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStringViewController.swift; sourceTree = "<group>"; };
+		FF512081246F09FC00DE5EC9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FF65C76B246DC03400B89093 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FF65C76D246DCAE900B89093 /* ConnectUTR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectUTR.swift; sourceTree = "<group>"; };
+		FF65C772246DCC8C00B89093 /* UTRSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UTRSearch.swift; path = ../../../../../../Documents/UTRSearch.swift; sourceTree = "<group>"; };
+		FF65C774246DCC9D00B89093 /* UTRSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTRSearchResponse.swift; sourceTree = "<group>"; };
+		FF68BE82246E8A1F007D5E4A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		FF68BE85246E909B007D5E4A /* AdditionalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoViewController.swift; sourceTree = "<group>"; };
+		FF68BE87246E9795007D5E4A /* ResetPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPWViewController.swift; sourceTree = "<group>"; };
+		FF68BE89246E9FC1007D5E4A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FFBDA09A2468B8C100539CE5 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		FFD1BDAD2465C27A0051A635 /* ITFManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFManager.swift; sourceTree = "<group>"; };
 		FFD1BDB12465C2B90051A635 /* ITFProfOverviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFProfOverviewResponse.swift; sourceTree = "<group>"; };
@@ -72,7 +90,7 @@
 		FFD1BDBB2465C43A0051A635 /* ITFPlayerSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFPlayerSearchResponse.swift; sourceTree = "<group>"; };
 		FFD1BDBE2465D71B0051A635 /* ITFProfileOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFProfileOverview.swift; sourceTree = "<group>"; };
 		FFFE0ACA2466A44A0063727A /* Nationalities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nationalities.swift; sourceTree = "<group>"; };
-		FFFE0ACC2466A8410063727A /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
+		FFFE0ACC2466A8410063727A /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		FFFE0AD724673C630063727A /* PlayerSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,12 +146,13 @@
 			children = (
 				FF38DA692461BE3500DC8CA9 /* AppDelegate.swift */,
 				FF38DA6B2461BE3500DC8CA9 /* SceneDelegate.swift */,
+				FF512081246F09FC00DE5EC9 /* Extensions.swift */,
 				FF38DA7F2461BE9C00DC8CA9 /* Model */,
 				FF38DA802461BEAA00DC8CA9 /* Controller */,
 				FF38DA812461BECD00DC8CA9 /* View */,
 				FF38DA742461BE3C00DC8CA9 /* Assets.xcassets */,
 				FF38DA792461BE3D00DC8CA9 /* Info.plist */,
-				FF98791D2462F70A00A01C9C /* GoogleService-Info.plist */,
+				FF65C76B246DC03400B89093 /* GoogleService-Info.plist */,
 			);
 			path = "Tennis-App";
 			sourceTree = "<group>";
@@ -169,12 +188,10 @@
 		FF38DA8A2461C06E00DC8CA9 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				FFFE0ACA2466A44A0063727A /* Nationalities.swift */,
-				FFFE0ACC2466A8410063727A /* Sex.swift */,
 				FF38DA842461BF8500DC8CA9 /* WelcomeViewController.swift */,
-				FF38DA862461C04500DC8CA9 /* RegisterViewController.swift */,
-				FF38DA882461C06600DC8CA9 /* LoginViewController.swift */,
 				FFBDA09A2468B8C100539CE5 /* Validators.swift */,
+				FF65C76F246DCAFE00B89093 /* Register */,
+				FF68BE84246E9069007D5E4A /* Login */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -182,21 +199,71 @@
 		FF38DA8B2461C07A00DC8CA9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FF68BE82246E8A1F007D5E4A /* TabBarViewController.swift */,
 				FF38DA6F2461BE3500DC8CA9 /* ProfileViewController.swift */,
 				FF38DA6D2461BE3500DC8CA9 /* HistoryViewController.swift */,
-				FFFE0AD424673AB70063727A /* New Match */,
-				FF38DA8E2461C93E00DC8CA9 /* CommunityViewController.swift */,
+				FFFE0AD424673AB70063727A /* Create Match */,
+				FF512080246F053100DE5EC9 /* Stringing */,
 				FF38DA902461CD8F00DC8CA9 /* PlayersViewController.swift */,
+				FF68BE89246E9FC1007D5E4A /* SettingsViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		FF512080246F053100DE5EC9 /* Stringing */ = {
+			isa = PBXGroup;
+			children = (
+				FF38DA8E2461C93E00DC8CA9 /* StringViewController.swift */,
+				FF51207E246F052B00DE5EC9 /* AddStringViewController.swift */,
+			);
+			path = Stringing;
+			sourceTree = "<group>";
+		};
+		FF65C76F246DCAFE00B89093 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				FFFE0ACA2466A44A0063727A /* Nationalities.swift */,
+				FFFE0ACC2466A8410063727A /* Gender.swift */,
+				FF38DA862461C04500DC8CA9 /* RegisterViewController.swift */,
+				FF65C76D246DCAE900B89093 /* ConnectUTR.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		FF65C770246DCC4400B89093 /* UTR Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FF38DA942461DB3100DC8CA9 /* UTRProfile.swift */,
+				FF38DA962461DB4200DC8CA9 /* UTRProfileResponse.swift */,
+			);
+			path = "UTR Profile";
+			sourceTree = "<group>";
+		};
+		FF65C771246DCC6C00B89093 /* UTR Search */ = {
+			isa = PBXGroup;
+			children = (
+				FF65C772246DCC8C00B89093 /* UTRSearch.swift */,
+				FF65C774246DCC9D00B89093 /* UTRSearchResponse.swift */,
+			);
+			path = "UTR Search";
+			sourceTree = "<group>";
+		};
+		FF68BE84246E9069007D5E4A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FF38DA882461C06600DC8CA9 /* LoginViewController.swift */,
+				FF68BE85246E909B007D5E4A /* AdditionalInfoViewController.swift */,
+				FF68BE87246E9795007D5E4A /* ResetPWViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		FFD1BDAB2465C25A0051A635 /* UTR */ = {
 			isa = PBXGroup;
 			children = (
 				FF38DA922461DB1B00DC8CA9 /* UTRManager.swift */,
-				FF38DA942461DB3100DC8CA9 /* UTRProfile.swift */,
-				FF38DA962461DB4200DC8CA9 /* UTRProfileResponse.swift */,
+				FF65C770246DCC4400B89093 /* UTR Profile */,
+				FF65C771246DCC6C00B89093 /* UTR Search */,
 			);
 			path = UTR;
 			sourceTree = "<group>";
@@ -239,13 +306,13 @@
 			path = "Player Search";
 			sourceTree = "<group>";
 		};
-		FFFE0AD424673AB70063727A /* New Match */ = {
+		FFFE0AD424673AB70063727A /* Create Match */ = {
 			isa = PBXGroup;
 			children = (
 				FF38DA8C2461C85400DC8CA9 /* MatchViewController.swift */,
 				FFFE0AD724673C630063727A /* PlayerSelectionViewController.swift */,
 			);
-			path = "New Match";
+			path = "Create Match";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,7 +378,7 @@
 			files = (
 				FF38DA782461BE3C00DC8CA9 /* LaunchScreen.storyboard in Resources */,
 				FF38DA832461BF1200DC8CA9 /* Main.storyboard in Resources */,
-				FF98791E2462F70A00A01C9C /* GoogleService-Info.plist in Resources */,
+				FF65C76C246DC03400B89093 /* GoogleService-Info.plist in Resources */,
 				FF38DA752461BE3C00DC8CA9 /* Assets.xcassets in Resources */,
 				FF38DA732461BE3500DC8CA9 /* Home.storyboard in Resources */,
 			);
@@ -384,11 +451,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFFE0AD824673C630063727A /* PlayerSelectionViewController.swift in Sources */,
+				FF65C76E246DCAE900B89093 /* ConnectUTR.swift in Sources */,
 				FF38DA8D2461C85400DC8CA9 /* MatchViewController.swift in Sources */,
 				FFD1BDBA2465C4230051A635 /* ITFPlayerSearch.swift in Sources */,
+				FF68BE86246E909B007D5E4A /* AdditionalInfoViewController.swift in Sources */,
+				FF68BE83246E8A1F007D5E4A /* TabBarViewController.swift in Sources */,
 				FFD1BDBF2465D71B0051A635 /* ITFProfileOverview.swift in Sources */,
+				FF65C773246DCC8C00B89093 /* UTRSearch.swift in Sources */,
 				FF38DA892461C06600DC8CA9 /* LoginViewController.swift in Sources */,
-				FF38DA8F2461C93E00DC8CA9 /* CommunityViewController.swift in Sources */,
+				FF38DA8F2461C93E00DC8CA9 /* StringViewController.swift in Sources */,
 				FF38DA912461CD8F00DC8CA9 /* PlayersViewController.swift in Sources */,
 				FF38DA702461BE3500DC8CA9 /* ProfileViewController.swift in Sources */,
 				FF38DA952461DB3100DC8CA9 /* UTRProfile.swift in Sources */,
@@ -396,16 +467,21 @@
 				FFD1BDB22465C2B90051A635 /* ITFProfOverviewResponse.swift in Sources */,
 				FFD1BDAE2465C27A0051A635 /* ITFManager.swift in Sources */,
 				FF38DA932461DB1B00DC8CA9 /* UTRManager.swift in Sources */,
-				FFFE0ACD2466A8410063727A /* Sex.swift in Sources */,
+				FFFE0ACD2466A8410063727A /* Gender.swift in Sources */,
 				FFD1BDB42465C3D60051A635 /* ITFCalendar.swift in Sources */,
 				FFD1BDB62465C3E70051A635 /* ITFCalendarResponse.swift in Sources */,
+				FF68BE8A246E9FC1007D5E4A /* SettingsViewController.swift in Sources */,
+				FF65C775246DCC9D00B89093 /* UTRSearchResponse.swift in Sources */,
 				FF38DA6A2461BE3500DC8CA9 /* AppDelegate.swift in Sources */,
+				FF51207F246F052B00DE5EC9 /* AddStringViewController.swift in Sources */,
 				FF38DA872461C04500DC8CA9 /* RegisterViewController.swift in Sources */,
 				FF38DA6C2461BE3500DC8CA9 /* SceneDelegate.swift in Sources */,
 				FFD1BDBC2465C43B0051A635 /* ITFPlayerSearchResponse.swift in Sources */,
 				FFBDA09B2468B8C100539CE5 /* Validators.swift in Sources */,
 				FF38DA972461DB4200DC8CA9 /* UTRProfileResponse.swift in Sources */,
 				FFFE0ACB2466A44A0063727A /* Nationalities.swift in Sources */,
+				FF68BE88246E9795007D5E4A /* ResetPWViewController.swift in Sources */,
+				FF512082246F09FC00DE5EC9 /* Extensions.swift in Sources */,
 				FF38DA852461BF8500DC8CA9 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

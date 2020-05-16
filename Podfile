@@ -13,7 +13,7 @@ pod 'IQKeyboardManagerSwift'
 pod 'ProgressHUD'
 pod 'SkyFloatingLabelTextField'
 pod 'MBProgressHUD', '~> 1.2.0'
+pod 'SwiftyJSON'
 pod 'Navajo-Swift'
 pod 'TextFieldEffects'
-
 end

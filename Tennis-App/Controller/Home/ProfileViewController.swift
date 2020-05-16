@@ -23,20 +23,7 @@ class ProfileViewController: UIViewController, UTRManagerDelegate {
 
 	}
 
-	@IBAction func logout(_ sender: Any) {
-		print("Logout tapped")
-		do{
-			try Auth.auth().signOut()
-		}catch{
-			print("Can't log out")
-		}
 
-		let story = UIStoryboard(name: "Main", bundle: nil)
-
-		let vc = story.instantiateViewController(identifier: "welcome") as UIViewController
-		vc.modalPresentationStyle = .fullScreen
-		present(vc,animated: true,completion: nil)
-	}
 	
 	func didUpdateUtrProfile(profile: UTRProfile) {
 		DispatchQueue.main.async {

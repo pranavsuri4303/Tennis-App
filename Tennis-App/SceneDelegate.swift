@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -50,4 +51,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-
+// Put this piece of code anywhere you like
