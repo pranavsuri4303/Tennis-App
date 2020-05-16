@@ -35,6 +35,8 @@
 		FF68BE86246E909B007D5E4A /* AdditionalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68BE85246E909B007D5E4A /* AdditionalInfoViewController.swift */; };
 		FF68BE88246E9795007D5E4A /* ResetPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68BE87246E9795007D5E4A /* ResetPWViewController.swift */; };
 		FF68BE8A246E9FC1007D5E4A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68BE89246E9FC1007D5E4A /* SettingsViewController.swift */; };
+		FFB0949524702E5300273B19 /* StringsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0949424702E5200273B19 /* StringsTableViewCell.swift */; };
+		FFB0949724702EBE00273B19 /* DataStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0949624702EBE00273B19 /* DataStrings.swift */; };
 		FFBDA09B2468B8C100539CE5 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBDA09A2468B8C100539CE5 /* Validators.swift */; };
 		FFD1BDAE2465C27A0051A635 /* ITFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BDAD2465C27A0051A635 /* ITFManager.swift */; };
 		FFD1BDB22465C2B90051A635 /* ITFProfOverviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BDB12465C2B90051A635 /* ITFProfOverviewResponse.swift */; };
@@ -81,6 +83,8 @@
 		FF68BE85246E909B007D5E4A /* AdditionalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoViewController.swift; sourceTree = "<group>"; };
 		FF68BE87246E9795007D5E4A /* ResetPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPWViewController.swift; sourceTree = "<group>"; };
 		FF68BE89246E9FC1007D5E4A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FFB0949424702E5200273B19 /* StringsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsTableViewCell.swift; sourceTree = "<group>"; };
+		FFB0949624702EBE00273B19 /* DataStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStrings.swift; sourceTree = "<group>"; };
 		FFBDA09A2468B8C100539CE5 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		FFD1BDAD2465C27A0051A635 /* ITFManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFManager.swift; sourceTree = "<group>"; };
 		FFD1BDB12465C2B90051A635 /* ITFProfOverviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFProfOverviewResponse.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 		FF38DA7F2461BE9C00DC8CA9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FFB0949824704CFC00273B19 /* StringsModal */,
 				FFD1BDAC2465C2610051A635 /* ITF */,
 				FFD1BDAB2465C25A0051A635 /* UTR */,
 			);
@@ -214,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				FF38DA8E2461C93E00DC8CA9 /* StringViewController.swift */,
+				FFB0949424702E5200273B19 /* StringsTableViewCell.swift */,
 				FF51207E246F052B00DE5EC9 /* AddStringViewController.swift */,
 			);
 			path = Stringing;
@@ -256,6 +262,14 @@
 				FF68BE87246E9795007D5E4A /* ResetPWViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		FFB0949824704CFC00273B19 /* StringsModal */ = {
+			isa = PBXGroup;
+			children = (
+				FFB0949624702EBE00273B19 /* DataStrings.swift */,
+			);
+			path = StringsModal;
 			sourceTree = "<group>";
 		};
 		FFD1BDAB2465C25A0051A635 /* UTR */ = {
@@ -452,11 +466,13 @@
 			files = (
 				FFFE0AD824673C630063727A /* PlayerSelectionViewController.swift in Sources */,
 				FF65C76E246DCAE900B89093 /* ConnectUTR.swift in Sources */,
+				FFB0949524702E5300273B19 /* StringsTableViewCell.swift in Sources */,
 				FF38DA8D2461C85400DC8CA9 /* MatchViewController.swift in Sources */,
 				FFD1BDBA2465C4230051A635 /* ITFPlayerSearch.swift in Sources */,
 				FF68BE86246E909B007D5E4A /* AdditionalInfoViewController.swift in Sources */,
 				FF68BE83246E8A1F007D5E4A /* TabBarViewController.swift in Sources */,
 				FFD1BDBF2465D71B0051A635 /* ITFProfileOverview.swift in Sources */,
+				FFB0949724702EBE00273B19 /* DataStrings.swift in Sources */,
 				FF65C773246DCC8C00B89093 /* UTRSearch.swift in Sources */,
 				FF38DA892461C06600DC8CA9 /* LoginViewController.swift in Sources */,
 				FF38DA8F2461C93E00DC8CA9 /* StringViewController.swift in Sources */,
