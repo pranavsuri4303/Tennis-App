@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import ProgressHUD
+import MBProgressHUD
 
 
 class ResetPWViewController: UIViewController {
@@ -23,10 +24,13 @@ class ResetPWViewController: UIViewController {
     }
     
 	@IBAction func resetPWPressed(_ sender: UIButton) {
+        self.showIndicator(withTitle: "Please wait...", and: "Sending email.")
 		Auth.auth().sendPasswordReset(withEmail: emailField.text!) { (err) in
 			if err != nil{
+                self.hideIndicator()
 				ProgressHUD.showError(err?.localizedDescription)
 			} else{
+                self.hideIndicator()
 				ProgressHUD.showSuccess("An email has been sent with instructions to reset your password.")
 			}
 		}

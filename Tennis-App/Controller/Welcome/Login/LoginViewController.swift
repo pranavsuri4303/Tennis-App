@@ -16,8 +16,10 @@ import SkyFloatingLabelTextField
 class LoginViewController: UIViewController, GIDSignInDelegate {
 
 	@IBOutlet weak var EmailField: SkyFloatingLabelTextField!
-	@IBOutlet weak var PasswordField: SkyFloatingLabelTextField!
-
+    @IBOutlet weak var EmailImage: UIImageView!
+    @IBOutlet weak var PasswordField: SkyFloatingLabelTextField!
+    @IBOutlet weak var PasswordImage: UIImageView!
+    
 	@IBOutlet weak var googleButon: GIDSignInButton!
 
 
@@ -28,11 +30,12 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
 		super.viewDidLoad()
 		self.navigationController?.isNavigationBarHidden = false
 		// Do any additional setup after loading the view.
+
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().delegate = self
 		googleButon.style = GIDSignInButtonStyle(rawValue: 1)!
 		self.hideKeyboardWhenTappedAround()
-
+        
 	}
 
 	@IBAction func signInPressed(_ sender: UIButton) {
@@ -69,12 +72,18 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
 				print(error.localizedDescription)
 				ProgressHUD.showError("Error Logging in")
 			} else {
-				self.hideIndicator()
-				ProgressHUD.showSuccess("Logged in")
-				print("LoginSuccess")
-				let story = UIStoryboard(name: "Home", bundle: nil)
-				let vc = story.instantiateViewController(identifier: "tab") as UITabBarController
-				self.present(vc,animated: true,completion: nil)
+                if ((authResult?.additionalUserInfo?.isNewUser) == true){
+                    self.hideIndicator()
+                    ProgressHUD.showSuccess("Logged in")
+                    self.performSegue(withIdentifier: "SignInToExtra", sender: self)
+                } else{
+                    self.hideIndicator()
+                    ProgressHUD.showSuccess("Logged in")
+                    print("LoginSuccess")
+                    let story = UIStoryboard(name: "Home", bundle: nil)
+                    let vc = story.instantiateViewController(identifier: "tab") as UITabBarController
+                    self.present(vc,animated: true,completion: nil)
+                }
 			}
 		}
 	}
@@ -83,6 +92,3 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
 	}
 }
 
-extension LoginViewController: UITextFieldDelegate{
-
-}

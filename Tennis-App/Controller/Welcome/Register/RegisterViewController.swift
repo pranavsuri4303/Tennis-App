@@ -62,6 +62,7 @@ class RegisterViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+//        self.navigationItem.hidesBackButton = true
 		self.hideKeyboardWhenTappedAround()
 		
 		// Nationality Picker Setup
@@ -217,6 +218,13 @@ class RegisterViewController: UIViewController {
 }
 
 //MARK: Extensions
+
+
+
+
+
+
+
 //MARK: Nationality Picker and Sex Picker Delegation
 extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource{
 

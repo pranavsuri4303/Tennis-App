@@ -34,9 +34,6 @@ class WelcomeViewController: UIViewController {
 		registerButton.layer.cornerRadius = 10
 
 	}
-	override func viewWillAppear(_ animated: Bool) {
-		self.navigationController?.setNavigationBarHidden(true, animated: animated)
-	}
 
 
 }

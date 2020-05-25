@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jbf-d5-en2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jbf-d5-en2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Welcome View Controller-->
+        <!--Welcome-->
         <scene sceneID="Ten-t3-sf6">
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" id="VWa-uo-ruw" customClass="WelcomeViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,7 +43,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.38823529411764707" green="0.71764705882352942" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Uku-2B-BIl" firstAttribute="bottom" secondItem="JRK-Nt-EGC" secondAttribute="bottom" constant="10" id="YFq-DA-uzH"/>
                             <constraint firstItem="Uku-2B-BIl" firstAttribute="trailing" secondItem="JRK-Nt-EGC" secondAttribute="trailing" constant="20" id="dbm-Xq-rPh"/>
@@ -53,7 +53,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uku-2B-BIl"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hlE-gG-4DI"/>
+                    <navigationItem key="navigationItem" title="Welcome" id="hlE-gG-4DI"/>
                     <connections>
                         <outlet property="registerButton" destination="BYQ-EB-SbB" id="LA4-oh-arh"/>
                         <outlet property="signInButton" destination="cSg-pO-Eei" id="LC2-Uv-xf4"/>
@@ -63,25 +63,41 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
         </scene>
-        <!--ResetPW View Controller-->
+        <!--Reset Password-->
         <scene sceneID="8Ll-e0-MMK">
             <objects>
-                <viewController id="3tW-AH-pip" customClass="ResetPWViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="formSheet" id="3tW-AH-pip" customClass="ResetPWViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="abe-SG-ucT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MDc-FR-nUI">
-                                <rect key="frame" x="41.5" y="409.5" width="331" height="77"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MDc-FR-nUI">
+                                <rect key="frame" x="41.5" y="372.5" width="331" height="97"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="843-iB-WPM" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="39"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YK6-PO-6DA">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="44.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RRN-5A-ZqC">
+                                                <rect key="frame" x="0.0" y="0.5" width="44.5" height="43.5"/>
+                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="RRN-5A-ZqC" secondAttribute="height" multiplier="1:1" id="3Qw-c0-WkE"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="843-iB-WPM" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="49.5" y="0.0" width="281.5" height="44.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alP-a7-Em3">
-                                        <rect key="frame" x="0.0" y="47" width="331" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <rect key="frame" x="0.0" y="52.5" width="331" height="44.5"/>
+                                        <color key="backgroundColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Reset Password">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="resetPWPressed:" destination="3tW-AH-pip" eventType="touchUpInside" id="4XA-L7-kFc"/>
                                         </connections>
@@ -94,10 +110,11 @@
                             <constraint firstItem="MDc-FR-nUI" firstAttribute="width" secondItem="abe-SG-ucT" secondAttribute="width" multiplier="0.8" id="D5w-B6-QFG"/>
                             <constraint firstItem="MDc-FR-nUI" firstAttribute="centerX" secondItem="abe-SG-ucT" secondAttribute="centerX" id="Yut-75-gU3"/>
                             <constraint firstItem="MDc-FR-nUI" firstAttribute="centerY" secondItem="abe-SG-ucT" secondAttribute="centerY" id="nWP-4r-2kF"/>
+                            <constraint firstItem="MDc-FR-nUI" firstAttribute="height" secondItem="dCf-cP-P8A" secondAttribute="height" multiplier="0.12" id="wU9-f8-jev"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dCf-cP-P8A"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aSC-kO-PJk"/>
+                    <navigationItem key="navigationItem" title="Reset Password" largeTitleDisplayMode="always" id="aSC-kO-PJk"/>
                     <connections>
                         <outlet property="emailField" destination="843-iB-WPM" id="LFt-Od-ZgU"/>
                     </connections>
@@ -109,47 +126,93 @@
         <!--Sign In-->
         <scene sceneID="9Ln-oK-SOB">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="FpY-dI-ddS" customClass="LoginViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="FpY-dI-ddS" customClass="LoginViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="28b-yE-Weh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hnl-Sa-okJ">
-                                <rect key="frame" x="41.5" y="336" width="331" height="224"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Hnl-Sa-okJ">
+                                <rect key="frame" x="41.5" y="304.5" width="331" height="287"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SXB-cx-L2p" userLabel="Email" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cgP-0P-fEa" userLabel="Password" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="39" width="331" height="43"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="H4U-hJ-LXH">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="222.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vMj-Ct-3ha">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="133.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SrG-to-nTS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="331" height="39"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AoL-BX-v9x">
+                                                                <rect key="frame" x="0.0" y="0.5" width="39" height="38"/>
+                                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="AoL-BX-v9x" secondAttribute="height" multiplier="1:1" id="MOf-A7-2Nj"/>
+                                                                </constraints>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                            </imageView>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="SXB-cx-L2p" userLabel="Email" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                                <rect key="frame" x="44" y="0.0" width="287" height="39"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dZo-Op-NgY">
+                                                        <rect key="frame" x="0.0" y="47" width="331" height="39"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="z9a-QO-x4Q">
+                                                                <rect key="frame" x="0.0" y="1" width="39" height="36.5"/>
+                                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="z9a-QO-x4Q" secondAttribute="height" multiplier="1:1" id="NbR-RK-Wu5"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cgP-0P-fEa" userLabel="Password" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                                <rect key="frame" x="44" y="0.0" width="287" height="39"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RmO-0E-LMU">
+                                                        <rect key="frame" x="0.0" y="94" width="331" height="39.5"/>
+                                                        <color key="backgroundColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="Sign in">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="signInPressed:" destination="FpY-dI-ddS" eventType="touchUpInside" id="xwO-me-fUg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ8-O7-3ry">
+                                                <rect key="frame" x="0.0" y="138.5" width="331" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="or"/>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMr-SJ-0Yg" customClass="GIDSignInButton">
+                                                <rect key="frame" x="0.0" y="172.5" width="331" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="X1Q-Fw-Snd"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="vMj-Ct-3ha" firstAttribute="height" secondItem="H4U-hJ-LXH" secondAttribute="height" multiplier="0.6" id="Hmd-LV-mT7"/>
+                                        </constraints>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcV-71-Nhg">
-                                        <rect key="frame" x="0.0" y="92" width="331" height="29"/>
+                                        <rect key="frame" x="0.0" y="227.5" width="331" height="59.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Forgot password?"/>
                                         <connections>
-                                            <segue destination="3tW-AH-pip" kind="show" id="cxi-AH-j9b"/>
+                                            <segue destination="3tW-AH-pip" kind="presentation" id="cxi-AH-j9b"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RmO-0E-LMU">
-                                        <rect key="frame" x="0.0" y="131" width="331" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Sign in"/>
-                                        <connections>
-                                            <action selector="signInPressed:" destination="FpY-dI-ddS" eventType="touchUpInside" id="xwO-me-fUg"/>
-                                        </connections>
-                                    </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMr-SJ-0Yg" customClass="GIDSignInButton">
-                                        <rect key="frame" x="0.0" y="174" width="331" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="X1Q-Fw-Snd"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -158,15 +221,16 @@
                             <constraint firstItem="Hnl-Sa-okJ" firstAttribute="centerX" secondItem="28b-yE-Weh" secondAttribute="centerX" id="EFv-nh-lCP"/>
                             <constraint firstItem="Hnl-Sa-okJ" firstAttribute="centerY" secondItem="28b-yE-Weh" secondAttribute="centerY" id="GV5-ri-ib1"/>
                             <constraint firstItem="Hnl-Sa-okJ" firstAttribute="width" secondItem="28b-yE-Weh" secondAttribute="width" multiplier="0.8" id="fWM-l9-eba"/>
-                            <constraint firstItem="Hnl-Sa-okJ" firstAttribute="height" secondItem="28b-yE-Weh" secondAttribute="height" multiplier="0.25" id="vtm-fG-vys"/>
+                            <constraint firstItem="Hnl-Sa-okJ" firstAttribute="height" secondItem="yaL-n5-jzY" secondAttribute="height" multiplier="0.4" id="odB-Tc-8JF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yaL-n5-jzY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign In" id="5bO-XH-UTg"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationItem key="navigationItem" title="Sign In" leftItemsSupplementBackButton="YES" id="5bO-XH-UTg"/>
                     <connections>
                         <outlet property="EmailField" destination="SXB-cx-L2p" id="3js-kE-r4k"/>
+                        <outlet property="EmailImage" destination="AoL-BX-v9x" id="KUx-1z-Ui2"/>
                         <outlet property="PasswordField" destination="cgP-0P-fEa" id="Dw1-xF-9Th"/>
+                        <outlet property="PasswordImage" destination="z9a-QO-x4Q" id="vLU-pg-jod"/>
                         <outlet property="googleButon" destination="OMr-SJ-0Yg" id="6io-EC-XMy"/>
                         <segue destination="IjS-vW-4dU" kind="showDetail" identifier="SignInToHome" id="3C5-5a-zLh"/>
                         <segue destination="vhn-mS-kgi" kind="show" identifier="SignInToExtra" id="1tI-di-ncl"/>
@@ -174,26 +238,142 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHZ-O7-lPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1913" y="-224"/>
+            <point key="canvasLocation" x="1911.594202898551" y="-224.33035714285714"/>
         </scene>
-        <!--Additional Info View Controller-->
+        <!--Additional Info-->
         <scene sceneID="tTs-XX-AGb">
             <objects>
                 <viewController id="vhn-mS-kgi" customClass="AdditionalInfoViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tiA-Ge-S4c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bGb-6q-Sgc">
+                                <rect key="frame" x="41.5" y="311.5" width="331" height="273"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="b1g-OZ-9gi">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="39"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SZX-he-EBS">
+                                                <rect key="frame" x="0.0" y="0.5" width="38.5" height="38"/>
+                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="SZX-he-EBS" secondAttribute="height" multiplier="1:1" id="Jig-pP-hcr"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="CSw-a4-9Tm" userLabel="FName" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="43.5" y="0.0" width="287.5" height="39"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="given-name"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xcn-0O-x02">
+                                        <rect key="frame" x="0.0" y="47" width="331" height="38.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="h32-4E-3PA">
+                                                <rect key="frame" x="0.0" y="1.5" width="38.5" height="36"/>
+                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="h32-4E-3PA" secondAttribute="height" multiplier="1:1" id="ND2-T1-BYM"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="SZv-jW-d7z" userLabel="LName" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="43.5" y="0.0" width="287.5" height="38.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="family-name"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Yw8-nV-nb8">
+                                        <rect key="frame" x="0.0" y="93.5" width="331" height="39"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ce6-Mr-spp">
+                                                <rect key="frame" x="0.0" y="0.5" width="38.5" height="38"/>
+                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Ce6-Mr-spp" secondAttribute="height" multiplier="1:1" id="swu-FJ-akW"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year of Birth (YYYY)" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="hp3-fB-mU1" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="43.5" y="0.0" width="287.5" height="39"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="H2G-FO-QvW">
+                                        <rect key="frame" x="0.0" y="140.5" width="331" height="39"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5wH-DW-gWp">
+                                                <rect key="frame" x="0.0" y="0.5" width="38.5" height="38"/>
+                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="5wH-DW-gWp" secondAttribute="height" multiplier="1:1" id="6cd-1c-7e1"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="e2q-q6-aBw" userLabel="Sex" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="43.5" y="0.0" width="287.5" height="39"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fPv-AS-ey2">
+                                        <rect key="frame" x="0.0" y="187.5" width="331" height="38.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uYK-4p-4hQ">
+                                                <rect key="frame" x="0.0" y="0.5" width="38.5" height="37.5"/>
+                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="uYK-4p-4hQ" secondAttribute="height" multiplier="1:1" id="eLk-83-OSM"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nationality" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="H3S-fJ-TYi" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="43.5" y="0.0" width="287.5" height="38.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yjs-sY-Shx">
+                                        <rect key="frame" x="0.0" y="234" width="331" height="39"/>
+                                        <color key="backgroundColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="DonePressed:" destination="vhn-mS-kgi" eventType="touchUpInside" id="Wa1-bf-cU9"/>
+                                            <action selector="registerPressed:" destination="cN4-I8-Olj" eventType="touchUpInside" id="WXX-Bj-zUN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bGb-6q-Sgc" firstAttribute="centerY" secondItem="tiA-Ge-S4c" secondAttribute="centerY" id="34j-rf-ACo"/>
+                            <constraint firstItem="bGb-6q-Sgc" firstAttribute="centerX" secondItem="tiA-Ge-S4c" secondAttribute="centerX" id="5cc-cI-EiA"/>
+                            <constraint firstItem="bGb-6q-Sgc" firstAttribute="width" secondItem="mbn-Qc-7It" secondAttribute="width" multiplier="0.8" id="W0y-l8-4oa"/>
+                            <constraint firstItem="bGb-6q-Sgc" firstAttribute="height" secondItem="mbn-Qc-7It" secondAttribute="height" multiplier="0.38" id="wJO-Du-PuT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mbn-Qc-7It"/>
                     </view>
-                    <navigationItem key="navigationItem" id="C5z-eB-U1k"/>
+                    <navigationItem key="navigationItem" title="Additional Info" id="C5z-eB-U1k"/>
                     <connections>
+                        <outlet property="FNameField" destination="CSw-a4-9Tm" id="bEa-TY-xLw"/>
+                        <outlet property="LNameField" destination="SZv-jW-d7z" id="qWd-Wg-vvu"/>
+                        <outlet property="NationalityField" destination="H3S-fJ-TYi" id="B7Q-sA-BKE"/>
+                        <outlet property="SexField" destination="e2q-q6-aBw" id="pvM-L2-NcF"/>
+                        <outlet property="YOBField" destination="hp3-fB-mU1" id="1TQ-FT-Ezo"/>
                         <segue destination="IjS-vW-4dU" kind="showDetail" identifier="ExtraToHome" id="2VU-tg-CBd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IaJ-3r-n9y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2580" y="-224"/>
+            <point key="canvasLocation" x="2559" y="-224"/>
         </scene>
         <!--Home-->
         <scene sceneID="ZJn-xb-3h0">
@@ -213,14 +393,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Enter name to search for profile..." translatesAutoresizingMaskIntoConstraints="NO" id="RTx-UN-2hV">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="srR-zn-PEs">
-                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="srR-zn-PEs">
+                                <rect key="frame" x="0.0" y="200" width="414" height="696"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xbt-Cs-XuY">
@@ -233,12 +407,25 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Enter name to search for profile..." translatesAutoresizingMaskIntoConstraints="NO" id="RTx-UN-2hV">
+                                <rect key="frame" x="0.0" y="144" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RTx-UN-2hV" firstAttribute="centerX" secondItem="ime-sZ-uUT" secondAttribute="centerX" id="Abx-XL-cDN"/>
+                            <constraint firstItem="srR-zn-PEs" firstAttribute="leading" secondItem="Wkg-5s-5lf" secondAttribute="leading" id="Zib-Sr-I45"/>
+                            <constraint firstItem="srR-zn-PEs" firstAttribute="bottom" secondItem="ime-sZ-uUT" secondAttribute="bottom" id="Zto-QZ-bR0"/>
+                            <constraint firstItem="Wkg-5s-5lf" firstAttribute="bottom" secondItem="RTx-UN-2hV" secondAttribute="bottom" constant="662" id="fMa-q3-TGN"/>
+                            <constraint firstItem="RTx-UN-2hV" firstAttribute="leading" secondItem="srR-zn-PEs" secondAttribute="leading" id="p9Y-TX-Lqw"/>
+                            <constraint firstItem="srR-zn-PEs" firstAttribute="top" secondItem="RTx-UN-2hV" secondAttribute="bottom" id="pem-US-Q5K"/>
+                            <constraint firstItem="srR-zn-PEs" firstAttribute="trailing" secondItem="Wkg-5s-5lf" secondAttribute="trailing" id="zlS-YZ-yHr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Wkg-5s-5lf"/>
                     </view>
                     <navigationItem key="navigationItem" title="Connect UTR" id="KSA-hV-Kff">
-                        <barButtonItem key="rightBarButtonItem" title="Skip" id="VhE-bL-1UQ">
+                        <barButtonItem key="rightBarButtonItem" title="Skip" style="done" id="VhE-bL-1UQ">
                             <connections>
                                 <action selector="skipPressed:" destination="fdK-vR-HR8" id="L6N-Jh-FMv"/>
                             </connections>
@@ -256,71 +443,170 @@
         <!--Register-->
         <scene sceneID="AIR-Nf-gn9">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="cN4-I8-Olj" customClass="RegisterViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="cN4-I8-Olj" customClass="RegisterViewController" customModule="Tennis_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y2Z-vl-ceZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="89j-VL-BK5">
-                                <rect key="frame" x="41.5" y="216" width="331" height="464"/>
+                                <rect key="frame" x="41.5" y="220" width="331" height="456"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="26B-SE-Owh">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="37.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8kp-nZ-NI1" userLabel="FName" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="42.5" width="331" height="37.5"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="given-name"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="HFw-so-2T8" userLabel="LName" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="85" width="331" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="family-name"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year of Birth (YYYY)" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9N7-E8-6f5" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="128" width="331" height="37.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="foI-WP-QVF" userLabel="Sex" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="170.5" width="331" height="37.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nationality" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GmX-hm-OP2" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="213" width="331" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LRT-wi-Lu6">
+                                        <rect key="frame" x="0.0" y="42" width="331" height="36.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4Dj-i7-bM4">
+                                                <rect key="frame" x="0.0" y="0.5" width="37" height="35.5"/>
+                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="4Dj-i7-bM4" secondAttribute="height" multiplier="1:1" id="w44-pr-6ws"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8kp-nZ-NI1" userLabel="FName" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="42" y="0.0" width="289" height="36.5"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="given-name"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zbp-BV-tSX">
+                                        <rect key="frame" x="0.0" y="83.5" width="331" height="37"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aIi-Cs-8Ye">
+                                                <rect key="frame" x="0.0" y="1.5" width="37" height="34.5"/>
+                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="aIi-Cs-8Ye" secondAttribute="height" multiplier="1:1" id="Wh4-8q-J8P"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="HFw-so-2T8" userLabel="LName" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="42" y="0.0" width="289" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="family-name"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rKz-dY-lNo">
+                                        <rect key="frame" x="0.0" y="125.5" width="331" height="37"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XMj-tz-KOn">
+                                                <rect key="frame" x="0.0" y="0.5" width="37" height="36"/>
+                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="XMj-tz-KOn" secondAttribute="height" multiplier="1:1" id="2UK-Ae-Ue4"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year of Birth (YYYY)" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9N7-E8-6f5" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="42" y="0.0" width="289" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="23y-Js-SGD">
+                                        <rect key="frame" x="0.0" y="167.5" width="331" height="37"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="y5Q-3y-DFJ">
+                                                <rect key="frame" x="0.0" y="0.5" width="37" height="36"/>
+                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="y5Q-3y-DFJ" secondAttribute="height" multiplier="1:1" id="Tp2-MA-Fbp"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="foI-WP-QVF" userLabel="Sex" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="42" y="0.0" width="289" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DuJ-yy-UqD">
+                                        <rect key="frame" x="0.0" y="209.5" width="331" height="37"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QcM-S0-vS2">
+                                                <rect key="frame" x="0.0" y="0.5" width="37" height="36"/>
+                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="QcM-S0-vS2" secondAttribute="height" multiplier="1:1" id="zhJ-7z-Ako"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nationality" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GmX-hm-OP2" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="42" y="0.0" width="289" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="B8f-0Y-4aO">
-                                        <rect key="frame" x="0.0" y="256" width="331" height="37.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="251.5" width="331" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="1Fq-Hb-Wdd" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="298.5" width="331" height="37.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-cb-ALv" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="341" width="331" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES" textContentType="new-password"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repaeat Password" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Err-Wv-gxU" userLabel="RPassword" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="384" width="331" height="37.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ecJ-KR-8Ty">
+                                        <rect key="frame" x="0.0" y="293.5" width="331" height="37"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eXM-V2-I7D">
+                                                <rect key="frame" x="0.0" y="0.5" width="37" height="36"/>
+                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="eXM-V2-I7D" secondAttribute="height" multiplier="1:1" id="3lW-wJ-TvD"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="1Fq-Hb-Wdd" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="42" y="0.0" width="289" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ce7-3M-4A9">
+                                        <rect key="frame" x="0.0" y="335.5" width="331" height="37"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UXY-hQ-Gxe">
+                                                <rect key="frame" x="0.0" y="1" width="37" height="34.5"/>
+                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="UXY-hQ-Gxe" secondAttribute="height" multiplier="1:1" id="ire-Ka-JgM"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-cb-ALv" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="42" y="0.0" width="289" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES" textContentType="new-password"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="plC-Cu-Xah">
+                                        <rect key="frame" x="0.0" y="377.5" width="331" height="36.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="g3G-WD-cw5">
+                                                <rect key="frame" x="0.0" y="1" width="37" height="34"/>
+                                                <color key="tintColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="g3G-WD-cw5" secondAttribute="height" multiplier="1:1" id="txt-H5-Q3n"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repaeat Password" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Err-Wv-gxU" userLabel="RPassword" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="42" y="0.0" width="289" height="36.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZe-QF-JeY">
-                                        <rect key="frame" x="0.0" y="426.5" width="331" height="37.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Register"/>
+                                        <rect key="frame" x="0.0" y="419" width="331" height="37"/>
+                                        <color key="backgroundColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="registerPressed:" destination="cN4-I8-Olj" eventType="touchUpInside" id="FWs-lN-9KW"/>
                                         </connections>
@@ -330,7 +616,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="89j-VL-BK5" firstAttribute="height" secondItem="Z8J-gA-rCB" secondAttribute="height" multiplier="0.6" id="LfT-JP-0uj"/>
+                            <constraint firstItem="89j-VL-BK5" firstAttribute="height" secondItem="Z8J-gA-rCB" secondAttribute="height" multiplier="0.635" id="LfT-JP-0uj"/>
                             <constraint firstItem="89j-VL-BK5" firstAttribute="centerY" secondItem="Y2Z-vl-ceZ" secondAttribute="centerY" id="swo-gP-T7g"/>
                             <constraint firstItem="89j-VL-BK5" firstAttribute="centerX" secondItem="Y2Z-vl-ceZ" secondAttribute="centerX" id="xa5-eU-5PH"/>
                             <constraint firstItem="89j-VL-BK5" firstAttribute="width" secondItem="Z8J-gA-rCB" secondAttribute="width" multiplier="0.8" id="zmt-IP-WYN"/>
@@ -360,9 +646,18 @@
                 <navigationController storyboardIdentifier="welcome" automaticallyAdjustsScrollViewInsets="NO" id="Jbf-d5-en2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="48b-FF-8kt">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="48b-FF-8kt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="99.5"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.93333333330000001" green="0.52156862749999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="42"/>
+                            <color key="textColor" red="0.93333333333333335" green="0.52156862745098043" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -377,4 +672,13 @@
     <inferredMetricsTieBreakers>
         <segue reference="3C5-5a-zLh"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="calendar.circle" catalog="system" width="128" height="121"/>
+        <image name="envelope.circle" catalog="system" width="128" height="121"/>
+        <image name="eye.slash" catalog="system" width="128" height="86"/>
+        <image name="flag.circle" catalog="system" width="128" height="121"/>
+        <image name="heart.circle" catalog="system" width="128" height="121"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

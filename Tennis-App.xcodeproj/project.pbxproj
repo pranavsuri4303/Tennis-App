@@ -29,7 +29,6 @@
 		FF512082246F09FC00DE5EC9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF512081246F09FC00DE5EC9 /* Extensions.swift */; };
 		FF65C76C246DC03400B89093 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF65C76B246DC03400B89093 /* GoogleService-Info.plist */; };
 		FF65C76E246DCAE900B89093 /* ConnectUTR.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C76D246DCAE900B89093 /* ConnectUTR.swift */; };
-		FF65C773246DCC8C00B89093 /* UTRSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C772246DCC8C00B89093 /* UTRSearch.swift */; };
 		FF65C775246DCC9D00B89093 /* UTRSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C774246DCC9D00B89093 /* UTRSearchResponse.swift */; };
 		FF68BE83246E8A1F007D5E4A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68BE82246E8A1F007D5E4A /* TabBarViewController.swift */; };
 		FF68BE86246E909B007D5E4A /* AdditionalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68BE85246E909B007D5E4A /* AdditionalInfoViewController.swift */; };
@@ -77,7 +76,6 @@
 		FF512081246F09FC00DE5EC9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FF65C76B246DC03400B89093 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FF65C76D246DCAE900B89093 /* ConnectUTR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectUTR.swift; sourceTree = "<group>"; };
-		FF65C772246DCC8C00B89093 /* UTRSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UTRSearch.swift; path = ../../../../../../Documents/UTRSearch.swift; sourceTree = "<group>"; };
 		FF65C774246DCC9D00B89093 /* UTRSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTRSearchResponse.swift; sourceTree = "<group>"; };
 		FF68BE82246E8A1F007D5E4A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FF68BE85246E909B007D5E4A /* AdditionalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoViewController.swift; sourceTree = "<group>"; };
@@ -248,7 +246,6 @@
 		FF65C771246DCC6C00B89093 /* UTR Search */ = {
 			isa = PBXGroup;
 			children = (
-				FF65C772246DCC8C00B89093 /* UTRSearch.swift */,
 				FF65C774246DCC9D00B89093 /* UTRSearchResponse.swift */,
 			);
 			path = "UTR Search";
@@ -473,7 +470,6 @@
 				FF68BE83246E8A1F007D5E4A /* TabBarViewController.swift in Sources */,
 				FFD1BDBF2465D71B0051A635 /* ITFProfileOverview.swift in Sources */,
 				FFB0949724702EBE00273B19 /* DataStrings.swift in Sources */,
-				FF65C773246DCC8C00B89093 /* UTRSearch.swift in Sources */,
 				FF38DA892461C06600DC8CA9 /* LoginViewController.swift in Sources */,
 				FF38DA8F2461C93E00DC8CA9 /* StringViewController.swift in Sources */,
 				FF38DA912461CD8F00DC8CA9 /* PlayersViewController.swift in Sources */,

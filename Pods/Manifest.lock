@@ -268,7 +268,7 @@ PODS:
   - ProgressHUD (2.70)
   - PromisesObjC (1.2.8)
   - SkyFloatingLabelTextField (3.8.0)
-  - SVProgressHUD (2.2.5)
+  - SwiftyJSON (5.0.0)
   - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
@@ -280,7 +280,7 @@ DEPENDENCIES:
   - Navajo-Swift
   - ProgressHUD
   - SkyFloatingLabelTextField
-  - SVProgressHUD
+  - SwiftyJSON
   - TextFieldEffects
 
 SPEC REPOS:
@@ -311,7 +311,7 @@ SPEC REPOS:
     - ProgressHUD
     - PromisesObjC
     - SkyFloatingLabelTextField
-    - SVProgressHUD
+    - SwiftyJSON
     - TextFieldEffects
 
 SPEC CHECKSUMS:
@@ -341,9 +341,9 @@ SPEC CHECKSUMS:
   ProgressHUD: e603e8b8622c47d8818b9fb38b3cfe9d3e7ca421
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 0033114b7b55d8ec58ce11e86bfc066e8914795a
+PODFILE CHECKSUM: c88d2ed9b33d4f693991f2dafe5c696dcd262555
 
 COCOAPODS: 1.9.1
