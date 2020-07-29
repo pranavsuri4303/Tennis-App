@@ -8,10 +8,14 @@
 
 import Foundation
 
-struct UTRProfileResponse: Decodable {
+struct UTRProfile: Decodable {
 	let firstName: String
 	let lastName: String
-
+    
+    var playerName: String{
+        return "\(firstName) \(lastName)"
+    }
+    
 	let singlesUtr: Double
 	let ratingStatusSingles: String
 	let ratingProgressSingles: String

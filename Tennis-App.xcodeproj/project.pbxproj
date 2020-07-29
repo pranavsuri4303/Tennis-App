@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		64BA352B9447F004AE216187 /* Pods_Tennis_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E610893CC627AB6D27FCD13 /* Pods_Tennis_App.framework */; };
+		B5F6081E24CD66D000D2CBE1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6081D24CD66D000D2CBE1 /* Constants.swift */; };
 		FF38DA6A2461BE3500DC8CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA692461BE3500DC8CA9 /* AppDelegate.swift */; };
 		FF38DA6C2461BE3500DC8CA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA6B2461BE3500DC8CA9 /* SceneDelegate.swift */; };
 		FF38DA6E2461BE3500DC8CA9 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA6D2461BE3500DC8CA9 /* HistoryViewController.swift */; };
@@ -22,14 +23,10 @@
 		FF38DA8D2461C85400DC8CA9 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA8C2461C85400DC8CA9 /* MatchViewController.swift */; };
 		FF38DA8F2461C93E00DC8CA9 /* StringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA8E2461C93E00DC8CA9 /* StringViewController.swift */; };
 		FF38DA912461CD8F00DC8CA9 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA902461CD8F00DC8CA9 /* PlayersViewController.swift */; };
-		FF38DA932461DB1B00DC8CA9 /* UTRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA922461DB1B00DC8CA9 /* UTRManager.swift */; };
-		FF38DA952461DB3100DC8CA9 /* UTRProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA942461DB3100DC8CA9 /* UTRProfile.swift */; };
-		FF38DA972461DB4200DC8CA9 /* UTRProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38DA962461DB4200DC8CA9 /* UTRProfileResponse.swift */; };
 		FF51207F246F052B00DE5EC9 /* AddStringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF51207E246F052B00DE5EC9 /* AddStringViewController.swift */; };
 		FF512082246F09FC00DE5EC9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF512081246F09FC00DE5EC9 /* Extensions.swift */; };
 		FF65C76C246DC03400B89093 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF65C76B246DC03400B89093 /* GoogleService-Info.plist */; };
-		FF65C76E246DCAE900B89093 /* ConnectUTR.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C76D246DCAE900B89093 /* ConnectUTR.swift */; };
-		FF65C775246DCC9D00B89093 /* UTRSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C774246DCC9D00B89093 /* UTRSearchResponse.swift */; };
+		FF65C76E246DCAE900B89093 /* ConnectUTRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C76D246DCAE900B89093 /* ConnectUTRViewController.swift */; };
 		FF68BE83246E8A1F007D5E4A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68BE82246E8A1F007D5E4A /* TabBarViewController.swift */; };
 		FF68BE86246E909B007D5E4A /* AdditionalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68BE85246E909B007D5E4A /* AdditionalInfoViewController.swift */; };
 		FF68BE88246E9795007D5E4A /* ResetPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68BE87246E9795007D5E4A /* ResetPWViewController.swift */; };
@@ -53,6 +50,7 @@
 		016F8ED8F975AA4279A9659F /* Pods-Tennis-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tennis-App.debug.xcconfig"; path = "Target Support Files/Pods-Tennis-App/Pods-Tennis-App.debug.xcconfig"; sourceTree = "<group>"; };
 		063F93ED7712654A62202699 /* Pods-Tennis-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tennis-App.release.xcconfig"; path = "Target Support Files/Pods-Tennis-App/Pods-Tennis-App.release.xcconfig"; sourceTree = "<group>"; };
 		0E610893CC627AB6D27FCD13 /* Pods_Tennis_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tennis_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5F6081D24CD66D000D2CBE1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FF38DA662461BE3500DC8CA9 /* Tennis-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tennis-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF38DA692461BE3500DC8CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF38DA6B2461BE3500DC8CA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,14 +67,10 @@
 		FF38DA8C2461C85400DC8CA9 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		FF38DA8E2461C93E00DC8CA9 /* StringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringViewController.swift; sourceTree = "<group>"; };
 		FF38DA902461CD8F00DC8CA9 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
-		FF38DA922461DB1B00DC8CA9 /* UTRManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTRManager.swift; sourceTree = "<group>"; };
-		FF38DA942461DB3100DC8CA9 /* UTRProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTRProfile.swift; sourceTree = "<group>"; };
-		FF38DA962461DB4200DC8CA9 /* UTRProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTRProfileResponse.swift; sourceTree = "<group>"; };
 		FF51207E246F052B00DE5EC9 /* AddStringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStringViewController.swift; sourceTree = "<group>"; };
 		FF512081246F09FC00DE5EC9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FF65C76B246DC03400B89093 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FF65C76D246DCAE900B89093 /* ConnectUTR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectUTR.swift; sourceTree = "<group>"; };
-		FF65C774246DCC9D00B89093 /* UTRSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTRSearchResponse.swift; sourceTree = "<group>"; };
+		FF65C76D246DCAE900B89093 /* ConnectUTRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectUTRViewController.swift; sourceTree = "<group>"; };
 		FF68BE82246E8A1F007D5E4A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FF68BE85246E909B007D5E4A /* AdditionalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoViewController.swift; sourceTree = "<group>"; };
 		FF68BE87246E9795007D5E4A /* ResetPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPWViewController.swift; sourceTree = "<group>"; };
@@ -164,7 +158,7 @@
 			children = (
 				FFB0949824704CFC00273B19 /* StringsModal */,
 				FFD1BDAC2465C2610051A635 /* ITF */,
-				FFD1BDAB2465C25A0051A635 /* UTR */,
+				B5F6081D24CD66D000D2CBE1 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,26 +223,9 @@
 				FFFE0ACA2466A44A0063727A /* Nationalities.swift */,
 				FFFE0ACC2466A8410063727A /* Gender.swift */,
 				FF38DA862461C04500DC8CA9 /* RegisterViewController.swift */,
-				FF65C76D246DCAE900B89093 /* ConnectUTR.swift */,
+				FF65C76D246DCAE900B89093 /* ConnectUTRViewController.swift */,
 			);
 			path = Register;
-			sourceTree = "<group>";
-		};
-		FF65C770246DCC4400B89093 /* UTR Profile */ = {
-			isa = PBXGroup;
-			children = (
-				FF38DA942461DB3100DC8CA9 /* UTRProfile.swift */,
-				FF38DA962461DB4200DC8CA9 /* UTRProfileResponse.swift */,
-			);
-			path = "UTR Profile";
-			sourceTree = "<group>";
-		};
-		FF65C771246DCC6C00B89093 /* UTR Search */ = {
-			isa = PBXGroup;
-			children = (
-				FF65C774246DCC9D00B89093 /* UTRSearchResponse.swift */,
-			);
-			path = "UTR Search";
 			sourceTree = "<group>";
 		};
 		FF68BE84246E9069007D5E4A /* Login */ = {
@@ -267,16 +244,6 @@
 				FFB0949624702EBE00273B19 /* DataStrings.swift */,
 			);
 			path = StringsModal;
-			sourceTree = "<group>";
-		};
-		FFD1BDAB2465C25A0051A635 /* UTR */ = {
-			isa = PBXGroup;
-			children = (
-				FF38DA922461DB1B00DC8CA9 /* UTRManager.swift */,
-				FF65C770246DCC4400B89093 /* UTR Profile */,
-				FF65C771246DCC6C00B89093 /* UTR Search */,
-			);
-			path = UTR;
 			sourceTree = "<group>";
 		};
 		FFD1BDAC2465C2610051A635 /* ITF */ = {
@@ -462,7 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFFE0AD824673C630063727A /* PlayerSelectionViewController.swift in Sources */,
-				FF65C76E246DCAE900B89093 /* ConnectUTR.swift in Sources */,
+				FF65C76E246DCAE900B89093 /* ConnectUTRViewController.swift in Sources */,
 				FFB0949524702E5300273B19 /* StringsTableViewCell.swift in Sources */,
 				FF38DA8D2461C85400DC8CA9 /* MatchViewController.swift in Sources */,
 				FFD1BDBA2465C4230051A635 /* ITFPlayerSearch.swift in Sources */,
@@ -474,27 +441,24 @@
 				FF38DA8F2461C93E00DC8CA9 /* StringViewController.swift in Sources */,
 				FF38DA912461CD8F00DC8CA9 /* PlayersViewController.swift in Sources */,
 				FF38DA702461BE3500DC8CA9 /* ProfileViewController.swift in Sources */,
-				FF38DA952461DB3100DC8CA9 /* UTRProfile.swift in Sources */,
 				FF38DA6E2461BE3500DC8CA9 /* HistoryViewController.swift in Sources */,
 				FFD1BDB22465C2B90051A635 /* ITFProfOverviewResponse.swift in Sources */,
 				FFD1BDAE2465C27A0051A635 /* ITFManager.swift in Sources */,
-				FF38DA932461DB1B00DC8CA9 /* UTRManager.swift in Sources */,
 				FFFE0ACD2466A8410063727A /* Gender.swift in Sources */,
 				FFD1BDB42465C3D60051A635 /* ITFCalendar.swift in Sources */,
 				FFD1BDB62465C3E70051A635 /* ITFCalendarResponse.swift in Sources */,
 				FF68BE8A246E9FC1007D5E4A /* SettingsViewController.swift in Sources */,
-				FF65C775246DCC9D00B89093 /* UTRSearchResponse.swift in Sources */,
 				FF38DA6A2461BE3500DC8CA9 /* AppDelegate.swift in Sources */,
 				FF51207F246F052B00DE5EC9 /* AddStringViewController.swift in Sources */,
 				FF38DA872461C04500DC8CA9 /* RegisterViewController.swift in Sources */,
 				FF38DA6C2461BE3500DC8CA9 /* SceneDelegate.swift in Sources */,
 				FFD1BDBC2465C43B0051A635 /* ITFPlayerSearchResponse.swift in Sources */,
 				FFBDA09B2468B8C100539CE5 /* Validators.swift in Sources */,
-				FF38DA972461DB4200DC8CA9 /* UTRProfileResponse.swift in Sources */,
 				FFFE0ACB2466A44A0063727A /* Nationalities.swift in Sources */,
 				FF68BE88246E9795007D5E4A /* ResetPWViewController.swift in Sources */,
 				FF512082246F09FC00DE5EC9 /* Extensions.swift in Sources */,
 				FF38DA852461BF8500DC8CA9 /* WelcomeViewController.swift in Sources */,
+				B5F6081E24CD66D000D2CBE1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,14 +604,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y4A5VAJ9JD;
+				DEVELOPMENT_TEAM = 3B5M536V2W;
 				INFOPLIST_FILE = "Tennis-App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pranav-suri.itf-tennis-manager";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.pranav-suri.itf-tennis-manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -660,14 +624,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y4A5VAJ9JD;
+				DEVELOPMENT_TEAM = 3B5M536V2W;
 				INFOPLIST_FILE = "Tennis-App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pranav-suri.itf-tennis-manager";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.pranav-suri.itf-tennis-manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

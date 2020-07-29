@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1081308643002-p4eu0pogk6ojuvritcqngk6kcpfm1tuh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1081308643002-p4eu0pogk6ojuvritcqngk6kcpfm1tuh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDQvd47piyGRAgLm5FAhEpHixArd68Pc-M</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1081308643002</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.pranav-suri.itf-tennis-manager</string>
+	<key>PROJECT_ID</key>
+	<string>itf-tennis-manager</string>
+	<key>STORAGE_BUCKET</key>
+	<string>itf-tennis-manager.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1081308643002:ios:1a00ab264cae0272a00c83</string>
+	<key>DATABASE_URL</key>
+	<string>https://itf-tennis-manager.firebaseio.com</string>
+</dict>
+</plist>

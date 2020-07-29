@@ -26,8 +26,6 @@ class DataStrings: NSObject {
 		stringBrand = json["stringBrand"] as! String
 		stringName = json["stringName"] as! String
 	}
-
-
 }
 
 

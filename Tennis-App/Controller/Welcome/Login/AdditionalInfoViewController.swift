@@ -79,7 +79,7 @@ class AdditionalInfoViewController: UIViewController {
                     self.hideIndicator()
                     ProgressHUD.showSuccess("Registered")
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                        self.performSegue(withIdentifier: "ExtraToHome", sender: self)
+                        self.performSegue(withIdentifier: "ExtraToUTR", sender: self)
                     }
                 }
             }

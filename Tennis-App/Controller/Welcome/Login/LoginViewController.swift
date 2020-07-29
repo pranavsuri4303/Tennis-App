@@ -50,7 +50,6 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
 				DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
 					self.performSegue(withIdentifier: "SignInToHome", sender: self)
 				}
-
 			}
 		}
 	}
